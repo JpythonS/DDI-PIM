@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-item>
+    <ion-input labelPlacement="floating" label="E-mail" type="email" [formControl]="emailControl"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input labelPlacement="floating" label="Senha" type="password" [formControl]="passwordControl"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="login()">Entrar</ion-button>
+</ion-content>

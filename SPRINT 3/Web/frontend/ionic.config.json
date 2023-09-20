@@ -1,0 +1,8 @@
+{
+  "name": "DDI",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "78d39069"
+}
