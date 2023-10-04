@@ -1,6 +1,6 @@
-#Diagrama de Implantação
+Diagrama de Implantação
 
-##Componentes do Sistema
+Componentes do Sistema
 
 1. Servidores WEB 
 - Serão incluídos dois servidores WEB para garantir alta disponibilidade e balanceamento de carga, hospendando a versão WEB da aplicação de folha de pagamento
@@ -20,7 +20,7 @@
 - A versão DESKTOP será instalada em computadores de usuários ADMIN e Recursos Humanos
 - Os computadores dos usuários se comunicarão com o servidor de aplicação para obter dados e funcionalidades
 
-##Instalação do Sistema
+Instalação do Sistema
 
 1. Instalação da Aplicação WEB
 - A aplicação WEB já estará implantada nos servidores WEB, portanto os usuários poderão acessá-la apenas abrindo um navegador e digitando a URL do sistema
@@ -42,6 +42,6 @@
 5. Manutenção Contínua
 - Será implementado um plano de manutenção contínua para atualizações de software, correções de segurança e backup regular dos dados em ambos os servidores de aplicação e banco de dados
 
-##Resumo
+Resumo
 
 Este diagrama de implantação fornece uma visão geral da estrutura e dos passos para instalar o sistema de automação total de folha de pagamento nas plataformas WEB e DESKTOP. A complexidade real da implantação pode variar dependendo das necessidades específicas da sua organização e da escolha de tecnologias e ferramentas.
