@@ -1,0 +1,111 @@
+C:\Users\kjjrq5\OneDrive - Aptiv\Área de Trabalho\Allan\DDI\DDI\bin\Debug\DDI.exe.config
+C:\Users\kjjrq5\OneDrive - Aptiv\Área de Trabalho\Allan\DDI\DDI\bin\Debug\DDI.exe
+C:\Users\kjjrq5\OneDrive - Aptiv\Área de Trabalho\Allan\DDI\DDI\bin\Debug\DDI.pdb
+C:\Users\kjjrq5\OneDrive - Aptiv\Área de Trabalho\Allan\DDI\DDI\obj\Debug\DDI.csprojResolveAssemblyReference.cache
+C:\Users\kjjrq5\OneDrive - Aptiv\Área de Trabalho\Allan\DDI\DDI\obj\Debug\DDI.Form1.resources
+C:\Users\kjjrq5\OneDrive - Aptiv\Área de Trabalho\Allan\DDI\DDI\obj\Debug\DDI.Properties.Resources.resources
+C:\Users\kjjrq5\OneDrive - Aptiv\Área de Trabalho\Allan\DDI\DDI\obj\Debug\DDI.csproj.GenerateResource.Cache
+C:\Users\kjjrq5\OneDrive - Aptiv\Área de Trabalho\Allan\DDI\DDI\obj\Debug\DDI.exe
+C:\Users\kjjrq5\OneDrive - Aptiv\Área de Trabalho\Allan\DDI\DDI\obj\Debug\DDI.pdb
+C:\Users\kjjrq5\OneDrive - Aptiv\Área de Trabalho\Allan\DDI\DDI\obj\Debug\DDI.menu.resources
+C:\Users\kjjrq5\OneDrive - Aptiv\Área de Trabalho\Allan\DDI\DDI\obj\Debug\DDI.Menu2.resources
+C:\Users\kjjrq5\OneDrive - Aptiv\Área de Trabalho\Allan\DDI\DDI\obj\Debug\DDI.CadastroEmpresa.resources
+D:\DDI\DDI\bin\Debug\DDI.exe.config
+D:\DDI\DDI\obj\Debug\DDI.csprojResolveAssemblyReference.cache
+D:\DDI\DDI\obj\Debug\DDI.CadastroEmpresa.resources
+D:\DDI\DDI\obj\Debug\DDI.Form1.resources
+D:\DDI\DDI\obj\Debug\DDI.menu.resources
+D:\DDI\DDI\obj\Debug\DDI.Menu2.resources
+D:\DDI\DDI\obj\Debug\DDI.Properties.Resources.resources
+D:\DDI\DDI\obj\Debug\DDI.csproj.GenerateResource.Cache
+D:\DDI\DDI\bin\Debug\DDI.exe
+D:\DDI\DDI\bin\Debug\DDI.pdb
+D:\DDI\DDI\obj\Debug\DDI.exe
+D:\DDI\DDI\obj\Debug\DDI.pdb
+D:\DDI\DDI\obj\Debug\DDI.Form2.resources
+C:\Users\Allan\Desktop\DDI\DDI\obj\Debug\DDI.csproj.AssemblyReference.cache
+C:\Users\Allan\Desktop\DDI\DDI\obj\Debug\DDI.exe
+C:\Users\Allan\Desktop\DDI\DDI\obj\Debug\DDI.pdb
+C:\Users\Allan\Desktop\DDI\DDI\bin\Debug\DDI.exe.config
+C:\Users\Allan\Desktop\DDI\DDI\bin\Debug\DDI.exe
+C:\Users\Allan\Desktop\DDI\DDI\bin\Debug\DDI.pdb
+C:\Users\Allan\Desktop\DDI\DDI\obj\Debug\DDI.CadastroEmpresa.resources
+C:\Users\Allan\Desktop\DDI\DDI\obj\Debug\DDI.Form1.resources
+C:\Users\Allan\Desktop\DDI\DDI\obj\Debug\DDI.Form2.resources
+C:\Users\Allan\Desktop\DDI\DDI\obj\Debug\DDI.menu.resources
+C:\Users\Allan\Desktop\DDI\DDI\obj\Debug\DDI.Menu2.resources
+C:\Users\Allan\Desktop\DDI\DDI\obj\Debug\DDI.Properties.Resources.resources
+C:\Users\Allan\Desktop\DDI\DDI\obj\Debug\DDI.csproj.GenerateResource.cache
+C:\Users\Allan\Desktop\DDI\DDI\obj\Debug\DDI.csproj.CoreCompileInputs.cache
+C:\Users\Allan\Desktop\DDI\DDI\obj\Debug\DDI.Relatorio.resources
+C:\Users\Allan\Desktop\DDI\DDI\obj\Debug\DDI.AlterarExcluir.resources
+D:\DDI\DDI\obj\Debug\DDI.AlterarExcluir.resources
+D:\DDI\DDI\obj\Debug\DDI.Relatorio.resources
+D:\DDI 9-10\DDI\bin\Debug\DDI.exe.config
+D:\DDI 9-10\DDI\obj\Debug\DDI.exe
+D:\DDI 9-10\DDI\obj\Debug\DDI.pdb
+D:\DDI 9-10\DDI\bin\Debug\DDI.exe
+D:\DDI 9-10\DDI\bin\Debug\DDI.pdb
+D:\DDI 9-10\DDI\obj\Debug\DDI.csprojResolveAssemblyReference.cache
+D:\DDI 9-10\DDI\obj\Debug\DDI.AlterarExcluir.resources
+D:\DDI 9-10\DDI\obj\Debug\DDI.CadastroCargos.resources
+D:\DDI 9-10\DDI\obj\Debug\DDI.CadastroEmpresa.resources
+D:\DDI 9-10\DDI\obj\Debug\DDI.Form1.resources
+D:\DDI 9-10\DDI\obj\Debug\DDI.menu.resources
+D:\DDI 9-10\DDI\obj\Debug\DDI.Menu2.resources
+D:\DDI 9-10\DDI\obj\Debug\DDI.Properties.Resources.resources
+D:\DDI 9-10\DDI\obj\Debug\DDI.Relatorio.resources
+D:\DDI 9-10\DDI\obj\Debug\DDI.csproj.GenerateResource.Cache
+D:\DDI 9-10 atualizado\DDI\bin\Debug\DDI.exe.config
+D:\DDI 9-10 atualizado\DDI\obj\Debug\DDI.exe
+D:\DDI 9-10 atualizado\DDI\obj\Debug\DDI.pdb
+D:\DDI 9-10 atualizado\DDI\bin\Debug\DDI.exe
+D:\DDI 9-10 atualizado\DDI\bin\Debug\DDI.pdb
+D:\DDI 9-10 atualizado\DDI\obj\Debug\DDI.csprojResolveAssemblyReference.cache
+D:\DDI 9-10 atualizado\DDI\obj\Debug\DDI.AlterarExcluir.resources
+D:\DDI 9-10 atualizado\DDI\obj\Debug\DDI.CadastroCargos.resources
+D:\DDI 9-10 atualizado\DDI\obj\Debug\DDI.CadastroEmpresa.resources
+D:\DDI 9-10 atualizado\DDI\obj\Debug\DDI.Form1.resources
+D:\DDI 9-10 atualizado\DDI\obj\Debug\DDI.menu.resources
+D:\DDI 9-10 atualizado\DDI\obj\Debug\DDI.Menu2.resources
+D:\DDI 9-10 atualizado\DDI\obj\Debug\DDI.Properties.Resources.resources
+D:\DDI 9-10 atualizado\DDI\obj\Debug\DDI.Relatorio.resources
+D:\DDI 9-10 atualizado\DDI\obj\Debug\DDI.csproj.GenerateResource.Cache
+C:\Users\Allan\Downloads\DDI 10-10 atualizado\DDI\bin\Debug\DDI.exe.config
+C:\Users\Allan\Downloads\DDI 10-10 atualizado\DDI\bin\Debug\DDI.exe
+C:\Users\Allan\Downloads\DDI 10-10 atualizado\DDI\bin\Debug\DDI.pdb
+C:\Users\Allan\Downloads\DDI 10-10 atualizado\DDI\obj\Debug\DDI.csproj.AssemblyReference.cache
+C:\Users\Allan\Downloads\DDI 10-10 atualizado\DDI\obj\Debug\DDI.AlterarExcluir.resources
+C:\Users\Allan\Downloads\DDI 10-10 atualizado\DDI\obj\Debug\DDI.CadastroCargos.resources
+C:\Users\Allan\Downloads\DDI 10-10 atualizado\DDI\obj\Debug\DDI.CadastroEmpresa.resources
+C:\Users\Allan\Downloads\DDI 10-10 atualizado\DDI\obj\Debug\DDI.Form1.resources
+C:\Users\Allan\Downloads\DDI 10-10 atualizado\DDI\obj\Debug\DDI.menu.resources
+C:\Users\Allan\Downloads\DDI 10-10 atualizado\DDI\obj\Debug\DDI.Menu2.resources
+C:\Users\Allan\Downloads\DDI 10-10 atualizado\DDI\obj\Debug\DDI.Properties.Resources.resources
+C:\Users\Allan\Downloads\DDI 10-10 atualizado\DDI\obj\Debug\DDI.Relatorio.resources
+C:\Users\Allan\Downloads\DDI 10-10 atualizado\DDI\obj\Debug\DDI.csproj.GenerateResource.cache
+C:\Users\Allan\Downloads\DDI 10-10 atualizado\DDI\obj\Debug\DDI.csproj.CoreCompileInputs.cache
+C:\Users\Allan\Downloads\DDI 10-10 atualizado\DDI\obj\Debug\DDI.exe
+C:\Users\Allan\Downloads\DDI 10-10 atualizado\DDI\obj\Debug\DDI.pdb
+C:\Users\Allan\Downloads\DDI 10-10 atualizado\DDI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Allan\Downloads\DDI 10-10 atualizado\DDI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Allan\Downloads\DDI 10-10 atualizado\DDI\obj\Debug\DDI.csproj.CopyComplete
+C:\Users\Allan\Downloads\DDI 11-10 atualizado\DDI\bin\Debug\DDI.exe.config
+C:\Users\Allan\Downloads\DDI 11-10 atualizado\DDI\bin\Debug\DDI.exe
+C:\Users\Allan\Downloads\DDI 11-10 atualizado\DDI\bin\Debug\DDI.pdb
+C:\Users\Allan\Downloads\DDI 11-10 atualizado\DDI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Allan\Downloads\DDI 11-10 atualizado\DDI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Allan\Downloads\DDI 11-10 atualizado\DDI\obj\Debug\DDI.csproj.AssemblyReference.cache
+C:\Users\Allan\Downloads\DDI 11-10 atualizado\DDI\obj\Debug\DDI.AlterarExcluir.resources
+C:\Users\Allan\Downloads\DDI 11-10 atualizado\DDI\obj\Debug\DDI.CadastroCargos.resources
+C:\Users\Allan\Downloads\DDI 11-10 atualizado\DDI\obj\Debug\DDI.CadastroEmpresa.resources
+C:\Users\Allan\Downloads\DDI 11-10 atualizado\DDI\obj\Debug\DDI.Form1.resources
+C:\Users\Allan\Downloads\DDI 11-10 atualizado\DDI\obj\Debug\DDI.menu.resources
+C:\Users\Allan\Downloads\DDI 11-10 atualizado\DDI\obj\Debug\DDI.Menu2.resources
+C:\Users\Allan\Downloads\DDI 11-10 atualizado\DDI\obj\Debug\DDI.Properties.Resources.resources
+C:\Users\Allan\Downloads\DDI 11-10 atualizado\DDI\obj\Debug\DDI.Relatorio.resources
+C:\Users\Allan\Downloads\DDI 11-10 atualizado\DDI\obj\Debug\DDI.csproj.GenerateResource.cache
+C:\Users\Allan\Downloads\DDI 11-10 atualizado\DDI\obj\Debug\DDI.csproj.CoreCompileInputs.cache
+C:\Users\Allan\Downloads\DDI 11-10 atualizado\DDI\obj\Debug\DDI.csproj.CopyComplete
+C:\Users\Allan\Downloads\DDI 11-10 atualizado\DDI\obj\Debug\DDI.exe
+C:\Users\Allan\Downloads\DDI 11-10 atualizado\DDI\obj\Debug\DDI.pdb
