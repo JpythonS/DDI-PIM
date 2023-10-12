@@ -38,9 +38,11 @@ namespace DDI
             if (txtLogin.Text == "")
             {
                 MessageBox.Show("Obrigatório informar o campo e-mail.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
             else if(txtSenha.Text == "") {
                 MessageBox.Show("Obrigatório informar o campo senha.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
             string apiUrl = "http://localhost:5294/api/auth/login";
@@ -63,11 +65,10 @@ namespace DDI
                     menu2.Show();
                     this.Hide();
                 } else {
-
+                    MessageBox.Show("Credenciais incorretas. Por favor, tente novamente.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             } catch( Exception ex) {
                 MessageBox.Show("Credenciais incorretas. Por favor, tente novamente.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
             }
 
         }
