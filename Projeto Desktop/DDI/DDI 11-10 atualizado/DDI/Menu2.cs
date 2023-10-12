@@ -40,6 +40,10 @@ namespace DDI
         {
             // cadastrar pessoal
             MessageBox.Show(Properties.Settings.Default.Token);
+
+            menu menuCadastro = new menu();
+            menuCadastro.Show();
+            this.Hide();
         }
 
         private async Task<List<Funcionario>> GetFuncionariosAsync(string token)
@@ -100,6 +104,46 @@ namespace DDI
                 // Trate erros de maneira apropriada
                 MessageBox.Show($"Erro ao obter funcionários: {ex.Message}");
             }
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CadastroCargos menuCadastro = new CadastroCargos();
+            menuCadastro.Show();
+            this.Hide();
+        }
+
+        private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CadastroEmpresa menuCadastro = new CadastroEmpresa();
+            menuCadastro.Show();
+            this.Hide();
+        }
+
+        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AlterarExcluir alterarExcluir = new AlterarExcluir();
+            alterarExcluir.Show();
+            this.Hide();
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Relatorio Relatorio = new Relatorio();
+            Relatorio.Show();
+            this.Hide();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Relatorio Relatorio = new Relatorio();
+            Relatorio.Show();
+            this.Hide();
+        }
+
+        private void lblSair_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
         }
     }
     

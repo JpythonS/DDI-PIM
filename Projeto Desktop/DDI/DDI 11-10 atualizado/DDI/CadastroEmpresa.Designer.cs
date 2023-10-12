@@ -50,6 +50,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@
             this.lblSair = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -254,6 +254,20 @@
             this.panel1.Size = new System.Drawing.Size(177, 630);
             this.panel1.TabIndex = 90;
             // 
+            // linkLabel3
+            // 
+            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(135)))), ((int)(((byte)(26)))));
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel3.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel3.Location = new System.Drawing.Point(4, 226);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(124, 17);
+            this.linkLabel3.TabIndex = 107;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "Cadastrar Cargos";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            // 
             // linkLabel6
             // 
             this.linkLabel6.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(135)))), ((int)(((byte)(26)))));
@@ -266,6 +280,7 @@
             this.linkLabel6.TabIndex = 106;
             this.linkLabel6.TabStop = true;
             this.linkLabel6.Text = "Relatório de salários";
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
             // linkLabel2
             // 
@@ -279,6 +294,7 @@
             this.linkLabel2.TabIndex = 104;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Relatório de funcionário";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // label6
             // 
@@ -302,6 +318,7 @@
             this.linkLabel1.TabIndex = 102;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Consultar funcionário";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label5
             // 
@@ -335,6 +352,7 @@
             this.linkLabel5.TabIndex = 98;
             this.linkLabel5.TabStop = true;
             this.linkLabel5.Text = "Cadastrar Empresarial";
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
             // 
             // linkLabel4
             // 
@@ -348,6 +366,7 @@
             this.linkLabel4.TabIndex = 99;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "Cadastrar Pessoal";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // lblSair
             // 
@@ -361,6 +380,7 @@
             this.lblSair.TabIndex = 97;
             this.lblSair.TabStop = true;
             this.lblSair.Text = "Sair";
+            this.lblSair.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblSair_LinkClicked_1);
             // 
             // pictureBox1
             // 
@@ -388,19 +408,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(153, 21);
             this.comboBox1.TabIndex = 91;
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(135)))), ((int)(((byte)(26)))));
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel3.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel3.Location = new System.Drawing.Point(4, 226);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(124, 17);
-            this.linkLabel3.TabIndex = 107;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Cadastrar Cargos";
             // 
             // CadastroEmpresa
             // 

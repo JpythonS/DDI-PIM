@@ -143,5 +143,50 @@ namespace DDI
         {
             MessageBox.Show("Você realmente deseja cancelar ?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
         }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Você já está nesta tela !", "Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CadastroEmpresa menuCadastro = new CadastroEmpresa();
+            menuCadastro.Show();
+            this.Hide();
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CadastroCargos menuCadastro = new CadastroCargos();
+            menuCadastro.Show();
+            this.Hide();
+        }
+
+        private void lblSair_LinkClicked_2(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();  
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AlterarExcluir alterarExcluir = new AlterarExcluir();
+            alterarExcluir.Show();
+            this.Hide();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Relatorio Relatorio = new Relatorio();
+            Relatorio.Show();
+            this.Hide();
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Relatorio Relatorio = new Relatorio();
+            Relatorio.Show();
+            this.Hide();
+        }
     }
 }

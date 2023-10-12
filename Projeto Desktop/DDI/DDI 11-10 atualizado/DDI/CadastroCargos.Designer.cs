@@ -86,6 +86,7 @@
             this.linkLabel6.TabIndex = 106;
             this.linkLabel6.TabStop = true;
             this.linkLabel6.Text = "Relatório de salários";
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -113,6 +114,7 @@
             this.linkLabel2.TabIndex = 104;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Relatório de funcionário";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // label6
             // 
@@ -136,6 +138,7 @@
             this.linkLabel1.TabIndex = 102;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Consultar funcionário";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label5
             // 
@@ -169,6 +172,7 @@
             this.linkLabel5.TabIndex = 98;
             this.linkLabel5.TabStop = true;
             this.linkLabel5.Text = "Cadastrar Empresarial";
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
             // 
             // linkLabel4
             // 
@@ -182,6 +186,7 @@
             this.linkLabel4.TabIndex = 99;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "Cadastrar Pessoal";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // lblSair
             // 
@@ -195,6 +200,7 @@
             this.lblSair.TabIndex = 97;
             this.lblSair.TabStop = true;
             this.lblSair.Text = "Sair";
+            this.lblSair.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblSair_LinkClicked);
             // 
             // pictureBox1
             // 
