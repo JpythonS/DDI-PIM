@@ -67,7 +67,7 @@ namespace DDI
                 } else {
                     MessageBox.Show("Credenciais incorretas. Por favor, tente novamente.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            } catch( Exception ex) {
+            } catch {
                 MessageBox.Show("Credenciais incorretas. Por favor, tente novamente.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
