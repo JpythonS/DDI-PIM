@@ -50,12 +50,18 @@ namespace DDI
             {
                 HttpResponseMessage response = await LoginAsync(apiUrl, requestData);
 
-                if (response.IsSuccessStatusCode)
-                {
-                    string responseContent = await response.Content.ReadAsStringAsync();
-                    var result = JsonConvert.DeserializeObject<string>(responseContent);
+                string responseContent = await response.Content.ReadAsStringAsync();
+                var result = JsonConvert.DeserializeObject<LoginResponse>(responseContent);
 
-                    MessageBox.Show(result);
+                if (response.IsSuccessStatusCode && result.Token.Length > 0)
+                {
+                    Properties.Settings.Default.Token = result.Token;
+                    Properties.Settings.Default.Save();
+
+
+                    Menu2 menu2 = new Menu2();
+                    menu2.Show();
+                    this.Hide();
                 }
             } catch( Exception ex) {
                 MessageBox.Show(ex.Message);
@@ -84,4 +90,10 @@ namespace DDI
 
         }
     }
+}
+
+public class LoginResponse
+{
+    public string Token { get; set; }
+    // Outros campos da resposta, se houver
 }
