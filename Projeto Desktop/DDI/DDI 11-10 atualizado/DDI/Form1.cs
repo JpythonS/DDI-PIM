@@ -62,9 +62,11 @@ namespace DDI
                     Menu2 menu2 = new Menu2();
                     menu2.Show();
                     this.Hide();
+                } else {
+
                 }
             } catch( Exception ex) {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Credenciais incorretas. Por favor, tente novamente.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
 
