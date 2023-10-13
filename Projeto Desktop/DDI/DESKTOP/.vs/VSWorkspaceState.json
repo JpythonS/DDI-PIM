@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DDI"
+    "\\DDI",
+    "\\DDI\\Properties"
   ],
-  "SelectedNode": "\\DDI.sln",
+  "SelectedNode": "\\DDI\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

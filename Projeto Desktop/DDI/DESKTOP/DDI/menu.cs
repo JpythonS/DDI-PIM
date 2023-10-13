@@ -188,5 +188,26 @@ namespace DDI
             Relatorio.Show();
             this.Hide();
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            CadastroEmpresa cadastroEmpresa = new CadastroEmpresa();
+            cadastroEmpresa.ObterDadosCadastroFuncionario(
+                txtNome.Text,
+                txtCpf.Text,
+                txtRg.Text, 
+                txtPis.Text, 
+                txtData.Text, 
+                txtCel.Text,
+                txtCep.Text, 
+                txtEndereco.Text, 
+                txtNumero.Text, 
+                txtBairro.Text, 
+                txtCidade.Text, 
+                txtEstado.Text);
+
+            cadastroEmpresa.Show();
+            this.Close();
+        }
     }
 }

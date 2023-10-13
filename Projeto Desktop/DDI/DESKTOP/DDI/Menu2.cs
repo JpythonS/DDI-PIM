@@ -39,8 +39,6 @@ namespace DDI
         private void linkLabel10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // cadastrar pessoal
-            MessageBox.Show(Properties.Settings.Default.Token);
-
             menu menuCadastro = new menu();
             menuCadastro.Show();
             this.Hide();
@@ -68,6 +66,17 @@ namespace DDI
 
         private async void Menu2_Load(object sender, EventArgs e)
         {
+            ColumnHeader headerNome = new ColumnHeader();
+            headerNome.Text = "Nome";
+            headerNome.Width = 100;
+            headerNome.TextAlign = HorizontalAlignment.Center;
+
+
+            ColumnHeader headerCargo = new ColumnHeader();
+            headerCargo.Text = "Cargo";
+            headerCargo.Width = 100;
+            headerCargo.TextAlign = HorizontalAlignment.Center;
+
             try
             {
                 List<Funcionario> funcionarios = await GetFuncionariosAsync(Properties.Settings.Default.Token);
@@ -75,18 +84,6 @@ namespace DDI
                 // Preencher a ListView com os resultados
                 foreach (Funcionario funcionario in funcionarios)
                 {
-
-                    ColumnHeader headerNome = new ColumnHeader();
-                    headerNome.Text = "Nome";
-                    headerNome.Width = 100;
-                    headerNome.TextAlign = HorizontalAlignment.Center;
-
-
-                    ColumnHeader headerCargo = new ColumnHeader();
-                    headerCargo.Text = "Cargo";
-                    headerCargo.Width = 100;
-                    headerCargo.TextAlign = HorizontalAlignment.Center;
-
                     listView1.Columns.Add(headerNome);
                     listView1.Columns.Add(headerCargo);
                     listView1.View = View.Details;
