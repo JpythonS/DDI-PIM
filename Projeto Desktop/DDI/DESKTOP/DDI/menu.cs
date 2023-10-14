@@ -17,8 +17,20 @@ namespace DDI
             InitializeComponent();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        public void definirDadosSalvosAnteriormente(CadastroFuncionario funcionario)
         {
+            txtNome.Text = funcionario.Nome;
+            txtCpf.Text = funcionario.Cpf;
+            txtRg.Text = funcionario.Rg;
+            txtPis.Text = funcionario.Pis;
+            txtData.Text = funcionario.DataNascimento;
+            txtCel.Text = funcionario.Celular;
+            textBoxCelEmergencia.Text = funcionario.CelularEmergencia;
+            txtEndereco.Text = funcionario.Endereco;
+            txtNumero.Text = funcionario.Numero;
+            txtBairro.Text = funcionario.Bairro;
+            txtCidade.Text = funcionario.Cidade;
+            txtEstado.Text = funcionario.Estado;
 
         }
 
@@ -34,104 +46,9 @@ namespace DDI
 
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("Você realmente deseja cancelar ?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-        }
-
-        private void txtNumero_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCidade_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEstado_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEndereco_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCep_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCel_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBairro_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtData_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void lblSair_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
@@ -153,61 +70,89 @@ namespace DDI
         {
             CadastroEmpresa menuCadastro = new CadastroEmpresa();
             menuCadastro.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             CadastroCargos menuCadastro = new CadastroCargos();
             menuCadastro.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void lblSair_LinkClicked_2(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();  
+            bool result = ModalService.ExibirModalSairSistema();
+
+            if (result)
+            {
+                Form1 form1 = new Form1();
+                form1.Show();
+                this.Close();
+            }
         }
 
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AlterarExcluir alterarExcluir = new AlterarExcluir();
             alterarExcluir.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Relatorio Relatorio = new Relatorio();
             Relatorio.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Relatorio Relatorio = new Relatorio();
             Relatorio.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            CadastroEmpresa cadastroEmpresa = new CadastroEmpresa();
-            cadastroEmpresa.ObterDadosCadastroFuncionario(
-                txtNome.Text,
-                txtCpf.Text,
-                txtRg.Text, 
-                txtPis.Text, 
-                txtData.Text, 
-                txtCel.Text,
-                txtCep.Text, 
-                txtEndereco.Text, 
-                txtNumero.Text, 
-                txtBairro.Text, 
-                txtCidade.Text, 
-                txtEstado.Text);
+            CadastroFuncionario cadastroFuncionario = new CadastroFuncionario 
+            {
+                Nome = txtNome.Text,
+                Cpf = txtCpf.Text,
+                Rg = txtRg.Text,
+                Pis = txtPis.Text,
+                DataNascimento = txtData.Text,
+                Celular = txtCel.Text,
+                CelularEmergencia = textBoxCelEmergencia.Text,
+                Endereco = txtEndereco.Text,
+                Numero = txtNumero.Text,
+                Bairro = txtBairro.Text,
+                Cidade = txtCidade.Text,
+                Estado = txtEstado.Text
 
+            };
+
+            CadastroEmpresa cadastroEmpresa = new CadastroEmpresa();
+            cadastroEmpresa.ObterDadosCadastroFuncionario(cadastroFuncionario);
             cadastroEmpresa.Show();
             this.Close();
         }
     }
+}
+
+public class CadastroFuncionario
+{
+    public string Nome { get; set; }
+    public string Cpf { get; set; }
+    public string Rg { get; set; }
+    public string Pis { get; set; }
+    public string DataNascimento { get; set; }
+    public string Celular { get; set; }
+    public string CelularEmergencia { get; set; }
+    public string Cep { get; set; }
+    public string Endereco { get; set; }
+    public string Numero { get; set; }
+    public string Bairro { get; set; }
+    public string Cidade { get; set; }
+    public string Estado { get; set; }
 }

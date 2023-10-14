@@ -90,6 +90,7 @@
     <Compile Include="Menu2.Designer.cs">
       <DependentUpon>Menu2.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModalService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Relatorio.cs">

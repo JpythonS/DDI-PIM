@@ -15,57 +15,33 @@ namespace DDI
 {
     public partial class CadastroEmpresa : Form
     {
-        private string Nome;
-        private string Cpf;
-        private string Rg;
-        private string Pis;
-        private string DataNascimento;
-        private string Celular;
-        private string Cep;
-        private string Endereco;
-        private string Numero;
-        private string Bairro;
-        private string Cidade;
-        private string Estado;
-        
+        private CadastroFuncionario Funcionario;
+        private readonly string apiUrlTipoCargo = "http://localhost:5294/api/tipoCargo";
+        private readonly string apiUrlTipoUsuario = "http://localhost:5294/api/tipoUsuario";
 
         public CadastroEmpresa()
         {
             InitializeComponent();
         }
 
-        public void ObterDadosCadastroFuncionario(string nome,string cpf, string rg, string pis, string dataNascimento, string celular, string cep, string endereco, string numero, string bairro, string cidadde, string estado)
+        public void ObterDadosCadastroFuncionario(CadastroFuncionario funcionario)
         {
-            this.Nome = nome;
-            this.Cpf = cpf;
-            this.Rg = rg;
-            this.Pis = pis;
-            this.Celular = celular;
-            this.DataNascimento = dataNascimento;
-            this.Cep = cep;
-            this.Endereco = endereco;
-            this.Numero = numero;
-            this.Bairro = bairro;
-            this.Cidade = cidadde;
-            this.Estado = estado;
+            Funcionario = funcionario;
         }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
- 
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Você realmente deseja cancelar ?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            menu menu = new menu();
+            menu.definirDadosSalvosAnteriormente(Funcionario);
+            menu.Show();
+            this.Close();
         }
 
         private async void CadastroEmpresa_Load(object sender, EventArgs e)
         {
             try
             {
-                List<TipoCargo> cargos = await GetCargosAsync();
+                List<TipoGenerico> cargos = await GetTipoGenericoAsync(apiUrlTipoCargo);
                 comboBoxCargo.DataSource = cargos;
                 comboBoxCargo.DisplayMember = "Valor";
                 comboBoxCargo.ValueMember = "Cod";
@@ -74,6 +50,11 @@ namespace DDI
                 comboBoxEmpresa.DataSource = empresas;
                 comboBoxEmpresa.DisplayMember = "Nome";
                 comboBoxEmpresa.ValueMember = "Id";
+
+                List<TipoGenerico> niveisPermissaoUsuario = await GetTipoGenericoAsync(apiUrlTipoUsuario);
+                comboBoxNivelPermissao.DataSource = niveisPermissaoUsuario;
+                comboBoxNivelPermissao.DisplayMember = "Valor";
+                comboBoxNivelPermissao.ValueMember = "Cod";
             }
             catch (Exception ex)
             {
@@ -87,29 +68,28 @@ namespace DDI
             MessageBox.Show("Você realmente deseja sair ?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
         }
 
-        private async   void btnAvancar_Click(object sender, EventArgs e)
+        private async void btnAvancar_Click(object sender, EventArgs e)
         {
             try
-            {
-
+            {            
                 var request = new CreateFuncionarioRequest
                 {
-                    NomeCompleto = this.Nome,
-                    DataNascimento = this.DataNascimento,
-                    Endereco = this.Endereco,
-                    Cpf = this.Cpf,
+                    NomeCompleto = Funcionario.Nome,
+                    DataNascimento = Funcionario.DataNascimento,
+                    Endereco = Funcionario.Endereco,
+                    Cpf = Funcionario.Cpf,
                     TipoCargoCod = Convert.ToInt32(comboBoxCargo.SelectedValue),
                     SalarioBase = Convert.ToDouble(textBoxSalario.Text),
                     JornadaTrabalhoSemanal = Convert.ToDouble(textBoxHorasSemana.Text),
                     UsuarioEmail = textBoxEmail.Text,
                     EmpresaId = Convert.ToInt32(comboBoxEmpresa.SelectedValue),
-                    Rg = this.Rg,
-                    Celular = this.Celular,
-                    CelularContatoEmergencia = textBoxCelularEmergencia.Text,
-                    Bairro = this.Bairro,
-                    Cidade = this.Cidade,
-                    Estado = this.Estado,
-                    Pis = this.Pis
+                    Rg = Funcionario.Rg,
+                    Celular = Funcionario.Celular,
+                    CelularContatoEmergencia = Funcionario.CelularEmergencia,
+                    Bairro = Funcionario.Bairro,
+                    Cidade = Funcionario.Cidade,
+                    Estado = Funcionario.Estado,
+                    Pis = Funcionario.Pis
                 };
 
                 var response = await CadastrarFuncionarioAsync(request, Properties.Settings.Default.Token);
@@ -144,18 +124,18 @@ namespace DDI
             }
         }
 
-        private async Task<List<TipoCargo>> GetCargosAsync()
+        private async Task<List<TipoGenerico>> GetTipoGenericoAsync(string apiUrl)
         {
             using (HttpClient client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("Authorization", $"Bearer {Properties.Settings.Default.Token}");
-                const string apiUrlTipoCargo = "http://localhost:5294/api/tipoCargo";
-                HttpResponseMessage response = await client.GetAsync(apiUrlTipoCargo);
+                
+                HttpResponseMessage response = await client.GetAsync(apiUrl);
 
                 if (response.IsSuccessStatusCode)
                 {
                     string responseContent = await response.Content.ReadAsStringAsync();
-                    return JsonConvert.DeserializeObject<List<TipoCargo>>(responseContent);
+                    return JsonConvert.DeserializeObject<List<TipoGenerico>>(responseContent);
                 }
                 else
                 {
@@ -226,12 +206,19 @@ namespace DDI
 
         private void lblSair_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            bool result = ModalService.ExibirModalSairSistema();
+
+            if (result)
+            {
+                Form1 form1 = new Form1();
+                form1.Show();
+                this.Close();
+            }
         }
     }
     }
 
-public class TipoCargo
+public class TipoGenerico
 {
     public int Cod { get; set; }
     public string Valor { get; set; }

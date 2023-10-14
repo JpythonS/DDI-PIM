@@ -69,6 +69,8 @@
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.lblSair = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBoxCelEmergencia = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -88,7 +90,6 @@
             this.txtData.Name = "txtData";
             this.txtData.Size = new System.Drawing.Size(189, 22);
             this.txtData.TabIndex = 6;
-            this.txtData.TextChanged += new System.EventHandler(this.txtData_TextChanged);
             // 
             // txtRg
             // 
@@ -113,7 +114,6 @@
             this.txtCel.Name = "txtCel";
             this.txtCel.Size = new System.Drawing.Size(189, 22);
             this.txtCel.TabIndex = 7;
-            this.txtCel.TextChanged += new System.EventHandler(this.txtCel_TextChanged);
             // 
             // txtNumero
             // 
@@ -122,7 +122,6 @@
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(189, 22);
             this.txtNumero.TabIndex = 10;
-            this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
             // 
             // txtCep
             // 
@@ -131,7 +130,6 @@
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(189, 22);
             this.txtCep.TabIndex = 8;
-            this.txtCep.TextChanged += new System.EventHandler(this.txtCep_TextChanged);
             // 
             // txtEndereco
             // 
@@ -140,7 +138,6 @@
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(535, 22);
             this.txtEndereco.TabIndex = 9;
-            this.txtEndereco.TextChanged += new System.EventHandler(this.txtEndereco_TextChanged);
             // 
             // txtBairro
             // 
@@ -149,7 +146,6 @@
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(153, 22);
             this.txtBairro.TabIndex = 12;
-            this.txtBairro.TextChanged += new System.EventHandler(this.txtBairro_TextChanged);
             // 
             // txtEstado
             // 
@@ -158,7 +154,6 @@
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(171, 22);
             this.txtEstado.TabIndex = 14;
-            this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             // 
             // txtCidade
             // 
@@ -167,7 +162,6 @@
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(156, 22);
             this.txtCidade.TabIndex = 13;
-            this.txtCidade.TextChanged += new System.EventHandler(this.txtCidade_TextChanged);
             // 
             // label2
             // 
@@ -190,7 +184,6 @@
             this.label4.Size = new System.Drawing.Size(35, 21);
             this.label4.TabIndex = 22;
             this.label4.Text = "RG";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -224,7 +217,6 @@
             this.label6.Size = new System.Drawing.Size(187, 21);
             this.label6.TabIndex = 24;
             this.label6.Text = "Data de Nascimento";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -236,7 +228,6 @@
             this.label7.Size = new System.Drawing.Size(68, 21);
             this.label7.TabIndex = 25;
             this.label7.Text = "Celular";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -248,7 +239,6 @@
             this.label8.Size = new System.Drawing.Size(43, 21);
             this.label8.TabIndex = 26;
             this.label8.Text = "CEP";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -260,7 +250,6 @@
             this.label9.Size = new System.Drawing.Size(90, 21);
             this.label9.TabIndex = 27;
             this.label9.Text = "Endereço";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
@@ -272,7 +261,6 @@
             this.label10.Size = new System.Drawing.Size(75, 21);
             this.label10.TabIndex = 28;
             this.label10.Text = "Número";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label12
             // 
@@ -284,7 +272,6 @@
             this.label12.Size = new System.Drawing.Size(56, 21);
             this.label12.TabIndex = 30;
             this.label12.Text = "Bairro";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label13
             // 
@@ -296,7 +283,6 @@
             this.label13.Size = new System.Drawing.Size(74, 21);
             this.label13.TabIndex = 31;
             this.label13.Text = "Cidade";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
@@ -308,7 +294,6 @@
             this.label14.Size = new System.Drawing.Size(68, 21);
             this.label14.TabIndex = 32;
             this.label14.Text = "Estado";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label1
             // 
@@ -543,11 +528,32 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(697, 305);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(185, 21);
+            this.label18.TabIndex = 97;
+            this.label18.Text = "Celular (emergência)";
+            // 
+            // textBoxCelEmergencia
+            // 
+            this.textBoxCelEmergencia.Location = new System.Drawing.Point(701, 330);
+            this.textBoxCelEmergencia.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxCelEmergencia.Name = "textBoxCelEmergencia";
+            this.textBoxCelEmergencia.Size = new System.Drawing.Size(189, 22);
+            this.textBoxCelEmergencia.TabIndex = 96;
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1409, 775);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.textBoxCelEmergencia);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.txtPis);
@@ -631,5 +637,7 @@
         private System.Windows.Forms.LinkLabel lblSair;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBoxCelEmergencia;
     }
 }

@@ -14,26 +14,10 @@ namespace DDI
 {
     public partial class Menu2 : Form
     {
-        private string apiUrl = "http://localhost:5294/api/funcionario/";
+        private readonly string apiUrl = "http://localhost:5294/api/funcionario/";
         public Menu2()
         {
             InitializeComponent();
-        }
-
-        private void lblSair_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Menu2 menu2 = new Menu2();
-            this.Close();
-        }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-
         }
 
         private void linkLabel10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -66,16 +50,24 @@ namespace DDI
 
         private async void Menu2_Load(object sender, EventArgs e)
         {
-            ColumnHeader headerNome = new ColumnHeader();
-            headerNome.Text = "Nome";
-            headerNome.Width = 100;
-            headerNome.TextAlign = HorizontalAlignment.Center;
+            ColumnHeader headerNome = new ColumnHeader()
+            {
+                Text = "Nome",
+                Width = 100,
+                TextAlign = HorizontalAlignment.Center
+            };
 
 
-            ColumnHeader headerCargo = new ColumnHeader();
-            headerCargo.Text = "Cargo";
-            headerCargo.Width = 100;
-            headerCargo.TextAlign = HorizontalAlignment.Center;
+            ColumnHeader headerCargo = new ColumnHeader()
+            {
+                Text = "Cargo",
+                Width = 100,
+                TextAlign = HorizontalAlignment.Center
+            };
+
+            listView1.Columns.Add(headerNome);
+            listView1.Columns.Add(headerCargo);
+            listView1.View = View.Details;
 
             try
             {
@@ -83,17 +75,10 @@ namespace DDI
 
                 // Preencher a ListView com os resultados
                 foreach (Funcionario funcionario in funcionarios)
-                {
-                    listView1.Columns.Add(headerNome);
-                    listView1.Columns.Add(headerCargo);
-                    listView1.View = View.Details;
-
+                {                                
                     ListViewItem item = new ListViewItem(funcionario.Nome);
                     item.SubItems.Add(funcionario.Cargo);
-
                     listView1.Items.Add(item);
-
-     
                 }
             }
             catch (Exception ex)
@@ -140,7 +125,14 @@ namespace DDI
 
         private void lblSair_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            bool result = ModalService.ExibirModalSairSistema();
+
+            if (result)
+            {
+                Form1 form1 = new Form1();
+                form1.Show();
+                this.Close();
+            }
         }
     }
     

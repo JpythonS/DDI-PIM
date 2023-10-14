@@ -55,9 +55,14 @@ namespace DDI
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            CadastroCargos menuCadastro = new CadastroCargos();
-            menuCadastro.Show();
-            this.Hide();
+            bool result = ModalService.ExibirModalSairSistema();
+
+            if (result)
+            {
+                Form1 form1 = new Form1();
+                form1.Show();
+                this.Close();
+            }
         }
     }
 }

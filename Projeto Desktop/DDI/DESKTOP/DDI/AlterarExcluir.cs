@@ -64,7 +64,14 @@ namespace DDI
 
         private void lblSair_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            bool result = ModalService.ExibirModalSairSistema();
+
+            if (result)
+            {
+                Form1 form1 = new Form1();
+                form1.Show();
+                this.Close();
+            }
         }
     }
 }

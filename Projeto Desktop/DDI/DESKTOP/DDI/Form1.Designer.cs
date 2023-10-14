@@ -53,7 +53,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnEntrar
             // 
@@ -77,7 +76,6 @@
             this.label4.Size = new System.Drawing.Size(60, 21);
             this.label4.TabIndex = 11;
             this.label4.Text = "E-mail:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -97,7 +95,6 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(144, 20);
             this.txtLogin.TabIndex = 9;
-            this.txtLogin.TextChanged += new System.EventHandler(this.txtLogin_TextChanged);
             // 
             // txtSenha
             // 
@@ -133,7 +130,6 @@
             this.label1.Size = new System.Drawing.Size(217, 21);
             this.label1.TabIndex = 14;
             this.label1.Text = "Faça login com sua conta:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox2
             // 

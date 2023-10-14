@@ -26,40 +26,47 @@ namespace DDI
         {
             menu menuCadastro = new menu();
             menuCadastro.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             CadastroEmpresa menuCadastro = new CadastroEmpresa();
             menuCadastro.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AlterarExcluir alterarExcluir = new AlterarExcluir();
             alterarExcluir.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Relatorio Relatorio = new Relatorio();
             Relatorio.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Relatorio Relatorio = new Relatorio();
             Relatorio.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void lblSair_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            bool result = ModalService.ExibirModalSairSistema();
+
+            if (result)
+            {
+                Form1 form1 = new Form1();
+                form1.Show();
+                this.Close();
+            }
         }
     }
 }

@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroEmpresa));
             this.label19 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBoxCelularEmergencia = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -42,7 +40,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxSalario = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.btnAvancar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,6 +60,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBoxEmpresa = new System.Windows.Forms.ComboBox();
             this.comboBoxCargo = new System.Windows.Forms.ComboBox();
+            this.comboBoxNivelPermissao = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -76,7 +76,6 @@
             this.label19.Size = new System.Drawing.Size(123, 21);
             this.label19.TabIndex = 88;
             this.label19.Text = "Observações";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // textBox7
             // 
@@ -85,25 +84,6 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(415, 22);
             this.textBox7.TabIndex = 87;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(488, 364);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(185, 21);
-            this.label18.TabIndex = 86;
-            this.label18.Text = "Celular (emergência)";
-            // 
-            // textBoxCelularEmergencia
-            // 
-            this.textBoxCelularEmergencia.Location = new System.Drawing.Point(492, 389);
-            this.textBoxCelularEmergencia.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxCelularEmergencia.Name = "textBoxCelularEmergencia";
-            this.textBoxCelularEmergencia.Size = new System.Drawing.Size(203, 22);
-            this.textBoxCelularEmergencia.TabIndex = 85;
             // 
             // label17
             // 
@@ -184,21 +164,21 @@
             this.textBoxSalario.Size = new System.Drawing.Size(412, 22);
             this.textBoxSalario.TabIndex = 76;
             // 
-            // btnCancelar
+            // btnVoltar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(1059, 706);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(133, 39);
-            this.btnCancelar.TabIndex = 74;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btnVoltar.FlatAppearance.BorderSize = 0;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.ForeColor = System.Drawing.Color.White;
+            this.btnVoltar.Location = new System.Drawing.Point(1059, 706);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(133, 39);
+            this.btnVoltar.TabIndex = 74;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAvancar
             // 
@@ -433,19 +413,39 @@
             this.comboBoxCargo.Size = new System.Drawing.Size(203, 24);
             this.comboBoxCargo.TabIndex = 92;
             // 
+            // comboBoxNivelPermissao
+            // 
+            this.comboBoxNivelPermissao.FormattingEnabled = true;
+            this.comboBoxNivelPermissao.Location = new System.Drawing.Point(492, 388);
+            this.comboBoxNivelPermissao.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxNivelPermissao.Name = "comboBoxNivelPermissao";
+            this.comboBoxNivelPermissao.Size = new System.Drawing.Size(203, 24);
+            this.comboBoxNivelPermissao.TabIndex = 94;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(488, 364);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(165, 21);
+            this.label7.TabIndex = 93;
+            this.label7.Text = "Nível de Permissão";
+            // 
             // CadastroEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1409, 775);
+            this.Controls.Add(this.comboBoxNivelPermissao);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBoxCargo);
             this.Controls.Add(this.comboBoxEmpresa);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.textBoxCelularEmergencia);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.label16);
@@ -454,7 +454,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxSalario);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnAvancar);
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -474,8 +474,6 @@
 
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBoxCelularEmergencia;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label label16;
@@ -484,7 +482,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxSalario;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnAvancar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -504,5 +502,7 @@
         private System.Windows.Forms.ComboBox comboBoxEmpresa;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.ComboBox comboBoxCargo;
+        private System.Windows.Forms.ComboBox comboBoxNivelPermissao;
+        private System.Windows.Forms.Label label7;
     }
 }

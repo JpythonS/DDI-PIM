@@ -23,16 +23,6 @@ namespace DDI
             httpClient = new HttpClient();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private async void btnEntrar_Click(object sender, EventArgs e)
         {
             if (txtLogin.Text == "")
@@ -63,7 +53,7 @@ namespace DDI
 
                     Menu2 menu2 = new Menu2();
                     menu2.Show();
-                    this.Hide();
+                    this.Hide();    
                 } else {
                     MessageBox.Show("Credenciais incorretas. Por favor, tente novamente.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -81,16 +71,6 @@ namespace DDI
                 request.Content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
                 return await httpClient.SendAsync(request);
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtLogin_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
