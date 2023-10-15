@@ -15,13 +15,17 @@ namespace DDI
 {
     public partial class CadastroEmpresa : Form
     {
-        private CadastroFuncionario Funcionario;
+        private readonly HttpClient httpClient;
         private readonly string apiUrlTipoCargo = "http://localhost:5294/api/tipoCargo";
         private readonly string apiUrlTipoUsuario = "http://localhost:5294/api/tipoUsuario";
+
+        private CadastroFuncionario Funcionario;
 
         public CadastroEmpresa()
         {
             InitializeComponent();
+            httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {Properties.Settings.Default.Token}");
         }
 
         public void ObterDadosCadastroFuncionario(CadastroFuncionario funcionario)
@@ -112,63 +116,49 @@ namespace DDI
 
         private async Task<HttpResponseMessage> CadastrarFuncionarioAsync(CreateFuncionarioRequest request, string token)
         {
-            using (HttpClient client = new HttpClient())
-            {
-                client.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
+            string requestBody = JsonConvert.SerializeObject(request);
+            var content = new StringContent(requestBody, Encoding.UTF8, "application/json");
 
-                string requestBody = JsonConvert.SerializeObject(request);
-                var content = new StringContent(requestBody, Encoding.UTF8, "application/json");
-
-                const string apiUrlCadastrarFuncionario = "http://localhost:5294/api/funcionario";
-                return await client.PostAsync(apiUrlCadastrarFuncionario, content);
-            }
+            const string apiUrlCadastrarFuncionario = "http://localhost:5294/api/funcionario";
+            return await httpClient.PostAsync(apiUrlCadastrarFuncionario, content);
         }
 
         private async Task<List<TipoGenerico>> GetTipoGenericoAsync(string apiUrl)
-        {
-            using (HttpClient client = new HttpClient())
-            {
-                client.DefaultRequestHeaders.Add("Authorization", $"Bearer {Properties.Settings.Default.Token}");
-                
-                HttpResponseMessage response = await client.GetAsync(apiUrl);
+        {                  
+            HttpResponseMessage response = await httpClient.GetAsync(apiUrl);
 
-                if (response.IsSuccessStatusCode)
-                {
-                    string responseContent = await response.Content.ReadAsStringAsync();
-                    return JsonConvert.DeserializeObject<List<TipoGenerico>>(responseContent);
-                }
-                else
-                {
-                    throw new Exception($"Erro na requisição à API: {response.StatusCode}");
-                }
+            if (response.IsSuccessStatusCode)
+            {
+                string responseContent = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<List<TipoGenerico>>(responseContent);
+            }
+            else
+            {
+                throw new Exception($"Erro na requisição à API: {response.StatusCode}");
             }
         }
 
         private async Task<List<Empresa>> GetEmpresasAsync()
         {
-            using (HttpClient client = new HttpClient())
-            {
-                client.DefaultRequestHeaders.Add("Authorization", $"Bearer {Properties.Settings.Default.Token}");
-                const string apiUrlTipoEmpresa = "http://localhost:5294/api/empresa";
-                HttpResponseMessage response = await client.GetAsync(apiUrlTipoEmpresa);
+            const string apiUrlTipoEmpresa = "http://localhost:5294/api/empresa";
+            HttpResponseMessage response = await httpClient.GetAsync(apiUrlTipoEmpresa);
 
-                if (response.IsSuccessStatusCode)
-                {
-                    string responseContent = await response.Content.ReadAsStringAsync();
-                    return JsonConvert.DeserializeObject<List<Empresa>>(responseContent);
-                }
-                else
-                {
-                    throw new Exception($"Erro na requisição à API: {response.StatusCode}");
-                }
+            if (response.IsSuccessStatusCode)
+            {
+                string responseContent = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<List<Empresa>>(responseContent);
             }
+            else
+            {
+                throw new Exception($"Erro na requisição à API: {response.StatusCode}");
+            }       
         }
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             menu menuCadastro = new menu();
             menuCadastro.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -180,28 +170,28 @@ namespace DDI
         {
             CadastroCargos menuCadastro = new CadastroCargos();
             menuCadastro.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AlterarExcluir alterarExcluir = new AlterarExcluir();
             alterarExcluir.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Relatorio Relatorio = new Relatorio();
             Relatorio.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Relatorio Relatorio = new Relatorio();
             Relatorio.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void lblSair_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
@@ -214,6 +204,13 @@ namespace DDI
                 form1.Show();
                 this.Close();
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Menu2 menu2 = new Menu2();
+            menu2.Show();
+            this.Close();
         }
     }
     }

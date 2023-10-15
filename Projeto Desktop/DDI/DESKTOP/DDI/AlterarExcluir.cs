@@ -26,21 +26,21 @@ namespace DDI
         {
             menu menuCadastro = new menu();
             menuCadastro.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             CadastroEmpresa menuCadastro = new CadastroEmpresa();
             menuCadastro.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             CadastroCargos menuCadastro = new CadastroCargos();
             menuCadastro.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -52,14 +52,14 @@ namespace DDI
         {
             Relatorio Relatorio = new Relatorio();
             Relatorio.Show();
-            this.Hide();
+            this.Close();   
         }
 
         private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Relatorio Relatorio = new Relatorio();
             Relatorio.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void lblSair_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -72,6 +72,13 @@ namespace DDI
                 form1.Show();
                 this.Close();
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Menu2 menu2 = new Menu2();
+            menu2.Show();
+            this.Close();
         }
     }
 }

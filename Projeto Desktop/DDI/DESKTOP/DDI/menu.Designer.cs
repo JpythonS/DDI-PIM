@@ -58,19 +58,19 @@
             this.label17 = new System.Windows.Forms.Label();
             this.txtPis = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBoxCelEmergencia = new System.Windows.Forms.TextBox();
+            this.lblSair = new System.Windows.Forms.LinkLabel();
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label11 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.lblSair = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBoxCelEmergencia = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -378,20 +378,52 @@
             this.panel1.Size = new System.Drawing.Size(236, 775);
             this.panel1.TabIndex = 95;
             // 
-            // linkLabel3
+            // pictureBox1
             // 
-            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(135)))), ((int)(((byte)(26)))));
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel3.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel3.Location = new System.Drawing.Point(5, 278);
-            this.linkLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(161, 21);
-            this.linkLabel3.TabIndex = 107;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Cadastrar Cargos";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-25, -17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(283, 210);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(697, 305);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(185, 21);
+            this.label18.TabIndex = 97;
+            this.label18.Text = "Celular (emergência)";
+            // 
+            // textBoxCelEmergencia
+            // 
+            this.textBoxCelEmergencia.Location = new System.Drawing.Point(701, 330);
+            this.textBoxCelEmergencia.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxCelEmergencia.Name = "textBoxCelEmergencia";
+            this.textBoxCelEmergencia.Size = new System.Drawing.Size(189, 22);
+            this.textBoxCelEmergencia.TabIndex = 96;
+            // 
+            // lblSair
+            // 
+            this.lblSair.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(135)))), ((int)(((byte)(26)))));
+            this.lblSair.AutoSize = true;
+            this.lblSair.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSair.LinkColor = System.Drawing.Color.Black;
+            this.lblSair.Location = new System.Drawing.Point(4, 458);
+            this.lblSair.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSair.Name = "lblSair";
+            this.lblSair.Size = new System.Drawing.Size(44, 23);
+            this.lblSair.TabIndex = 97;
+            this.lblSair.TabStop = true;
+            this.lblSair.Text = "Sair";
+            this.lblSair.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblSair_LinkClicked_2);
             // 
             // linkLabel6
             // 
@@ -449,17 +481,6 @@
             this.linkLabel1.Text = "Consultar funcionário";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(4, 310);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(114, 28);
-            this.label15.TabIndex = 101;
-            this.label15.Text = "Consulta";
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -470,6 +491,21 @@
             this.label16.Size = new System.Drawing.Size(120, 28);
             this.label16.TabIndex = 100;
             this.label16.Text = "Cadastro";
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(135)))), ((int)(((byte)(26)))));
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel3.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel3.Location = new System.Drawing.Point(5, 278);
+            this.linkLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(161, 21);
+            this.linkLabel3.TabIndex = 107;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "Cadastrar Cargos";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // linkLabel5
             // 
@@ -501,51 +537,16 @@
             this.linkLabel4.Text = "Cadastrar Pessoal";
             this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
-            // lblSair
+            // label15
             // 
-            this.lblSair.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(135)))), ((int)(((byte)(26)))));
-            this.lblSair.AutoSize = true;
-            this.lblSair.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSair.LinkColor = System.Drawing.Color.Black;
-            this.lblSair.Location = new System.Drawing.Point(4, 458);
-            this.lblSair.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblSair.Name = "lblSair";
-            this.lblSair.Size = new System.Drawing.Size(44, 23);
-            this.lblSair.TabIndex = 97;
-            this.lblSair.TabStop = true;
-            this.lblSair.Text = "Sair";
-            this.lblSair.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblSair_LinkClicked_2);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-25, -17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(283, 210);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(697, 305);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(185, 21);
-            this.label18.TabIndex = 97;
-            this.label18.Text = "Celular (emergência)";
-            // 
-            // textBoxCelEmergencia
-            // 
-            this.textBoxCelEmergencia.Location = new System.Drawing.Point(701, 330);
-            this.textBoxCelEmergencia.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxCelEmergencia.Name = "textBoxCelEmergencia";
-            this.textBoxCelEmergencia.Size = new System.Drawing.Size(189, 22);
-            this.textBoxCelEmergencia.TabIndex = 96;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(4, 310);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(114, 28);
+            this.label15.TabIndex = 101;
+            this.label15.Text = "Consulta";
             // 
             // menu
             // 
@@ -626,6 +627,10 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtPis;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBoxCelEmergencia;
+        private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel linkLabel6;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Label label11;
@@ -635,9 +640,5 @@
         private System.Windows.Forms.LinkLabel linkLabel5;
         private System.Windows.Forms.LinkLabel linkLabel4;
         private System.Windows.Forms.LinkLabel lblSair;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBoxCelEmergencia;
     }
 }

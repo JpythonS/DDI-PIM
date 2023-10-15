@@ -31,7 +31,6 @@ namespace DDI
             txtBairro.Text = funcionario.Bairro;
             txtCidade.Text = funcionario.Cidade;
             txtEstado.Text = funcionario.Estado;
-
         }
 
         private void lblSair_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -135,6 +134,13 @@ namespace DDI
             CadastroEmpresa cadastroEmpresa = new CadastroEmpresa();
             cadastroEmpresa.ObterDadosCadastroFuncionario(cadastroFuncionario);
             cadastroEmpresa.Show();
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Menu2 menu2 = new Menu2();
+            menu2.Show();
             this.Close();
         }
     }
