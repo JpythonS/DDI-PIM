@@ -1,0 +1,51 @@
+using Excel = Microsoft.Office.Interop.Excel;
+
+
+ cn.Open();
+
+
+
+                Excel.Application excelApp = new Excel.Application();
+                Excel.Workbook newWorkbook = excelApp.Workbooks.Add();
+
+
+
+                Excel.Worksheet newWorksheet = newWorkbook.Sheets.Add();
+                newWorksheet.Name = "tbl_produto";
+
+                 
+
+                string sql = "SELECT * FROM tbl_produto";
+                SqlCommand cm = new SqlCommand(sql, cn);
+                SqlDataReader dataReader = cm.ExecuteReader();
+                int row = 1;
+                while (dataReader.Read())
+                {
+                    for (int col = 1; col <= dataReader.FieldCount; col++)
+                    {
+                        newWorksheet.Cells[row, col] = dataReader.GetValue(col - 1).ToString();
+                    }
+                    row++;
+                }
+
+
+
+                Excel.ListObject table = newWorksheet.ListObjects.Add(Excel.XlListObjectSourceType.xlSrcRange,
+                newWorksheet.Range[newWorksheet.Cells[1, 1], newWorksheet.Cells[row - 1, dataReader.FieldCount]], Type.Missing, Excel.XlYesNoGuess.xlYes, Type.Missing);
+                table.TableStyle = "TableStyleMedium2";
+
+
+
+                string fileName = "_Estoque  " + DateTime.Now.ToString("yyyy-MM-dd HH-mm") + ".xlsx";
+                string filePath = "Controle" + fileName;
+                newWorkbook.SaveAs(filePath);
+                MessageBox.Show("Documento gerado na pasta Documentos", "Document", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+                newWorkbook.Close();
+                excelApp.Quit();
+                dataReader.Close();
+                cm.Dispose();
+                cn.Close();
+            }
