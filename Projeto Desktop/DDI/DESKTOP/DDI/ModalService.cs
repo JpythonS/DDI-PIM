@@ -15,5 +15,17 @@ namespace DDI
 
             return result == DialogResult.Yes;
         }
+
+        public static bool ExibirModalExclusao()
+        {
+            DialogResult result = MessageBox.Show(
+                "Tem certeza de que deseja excluir?",
+                "Confirmação",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            return result == DialogResult.Yes;
+        }
     }
 }

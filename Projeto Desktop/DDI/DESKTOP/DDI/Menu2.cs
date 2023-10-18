@@ -50,10 +50,17 @@ namespace DDI
 
         private async void Menu2_Load(object sender, EventArgs e)
         {
+            ColumnHeader headerMatricula = new ColumnHeader()
+            {
+                Text = "Matrícula",
+                Width = 100,
+                TextAlign = HorizontalAlignment.Center
+            };
+
             ColumnHeader headerNome = new ColumnHeader()
             {
                 Text = "Nome",
-                Width = 100,
+                Width = 200,
                 TextAlign = HorizontalAlignment.Center
             };
 
@@ -65,8 +72,17 @@ namespace DDI
                 TextAlign = HorizontalAlignment.Center
             };
 
+            ColumnHeader headerEmpresa = new ColumnHeader()
+            {
+                Text = "Empresa",
+                Width = 100,
+                TextAlign = HorizontalAlignment.Center
+            };
+
+            listView1.Columns.Add(headerMatricula);
             listView1.Columns.Add(headerNome);
             listView1.Columns.Add(headerCargo);
+            listView1.Columns.Add(headerEmpresa);
             listView1.View = View.Details;
 
             try
@@ -76,8 +92,10 @@ namespace DDI
                 // Preencher a ListView com os resultados
                 foreach (Funcionario funcionario in funcionarios)
                 {                                
-                    ListViewItem item = new ListViewItem(funcionario.Nome);
+                    ListViewItem item = new ListViewItem(funcionario.Id.ToString());
+                    item.SubItems.Add(funcionario.Nome);
                     item.SubItems.Add(funcionario.Cargo);
+                    item.SubItems.Add(funcionario.Empresa);
                     listView1.Items.Add(item);
                 }
             }
@@ -142,12 +160,20 @@ public class Funcionario
 {
     public int Id { get; set; }
     public string Nome { get; set; }
+    public string DataNascimento { get; set; }
     public string Endereco { get; set; }
     public string Cpf { get; set; }
+    public string Rg { get; set; }
+    public string Celular { get; set; } 
+    public string CelularContatoEmergencia { get; set; }
+    public string Bairro { get; set; }
+    public string Cidade { get; set; }
+    public string Estado { get; set; }
+    public string Pis { get; set; }
     public string Cargo { get; set; }
     public double SalarioBase { get; set; }
     public double JornadaTrabalhoSemanal { get; set; }
     public string Email { get; set; }
     public string Empresa { get; set; }
-    // Outros campos, se houver
+    public string NivelPermissao { get; set; }
 }

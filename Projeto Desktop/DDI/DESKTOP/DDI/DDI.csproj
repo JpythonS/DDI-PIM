@@ -60,6 +60,7 @@
     <Compile Include="AlterarExcluir.Designer.cs">
       <DependentUpon>AlterarExcluir.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApiService.cs" />
     <Compile Include="CadastroCargos.cs">
       <SubType>Form</SubType>
     </Compile>

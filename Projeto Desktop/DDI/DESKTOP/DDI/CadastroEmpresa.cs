@@ -49,16 +49,19 @@ namespace DDI
                 comboBoxCargo.DataSource = cargos;
                 comboBoxCargo.DisplayMember = "Valor";
                 comboBoxCargo.ValueMember = "Cod";
+                comboBoxCargo.SelectedIndex = -1;
 
                 List<Empresa> empresas = await GetEmpresasAsync();
                 comboBoxEmpresa.DataSource = empresas;
                 comboBoxEmpresa.DisplayMember = "Nome";
                 comboBoxEmpresa.ValueMember = "Id";
+                comboBoxEmpresa.SelectedIndex = -1;
 
                 List<TipoGenerico> niveisPermissaoUsuario = await GetTipoGenericoAsync(apiUrlTipoUsuario);
                 comboBoxNivelPermissao.DataSource = niveisPermissaoUsuario;
                 comboBoxNivelPermissao.DisplayMember = "Valor";
                 comboBoxNivelPermissao.ValueMember = "Cod";
+                comboBoxNivelPermissao.SelectedIndex = -1;
             }
             catch (Exception ex)
             {
@@ -96,7 +99,7 @@ namespace DDI
                     Pis = Funcionario.Pis
                 };
 
-                var response = await CadastrarFuncionarioAsync(request, Properties.Settings.Default.Token);
+                var response = await CadastrarFuncionarioAsync(request);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -114,7 +117,7 @@ namespace DDI
             }
         }
 
-        private async Task<HttpResponseMessage> CadastrarFuncionarioAsync(CreateFuncionarioRequest request, string token)
+        private async Task<HttpResponseMessage> CadastrarFuncionarioAsync(CreateFuncionarioRequest request)
         {
             string requestBody = JsonConvert.SerializeObject(request);
             var content = new StringContent(requestBody, Encoding.UTF8, "application/json");

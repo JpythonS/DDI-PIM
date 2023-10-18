@@ -398,6 +398,7 @@
             // 
             // comboBoxEmpresa
             // 
+            this.comboBoxEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEmpresa.FormattingEnabled = true;
             this.comboBoxEmpresa.Location = new System.Drawing.Point(492, 311);
             this.comboBoxEmpresa.Margin = new System.Windows.Forms.Padding(4);
@@ -407,6 +408,7 @@
             // 
             // comboBoxCargo
             // 
+            this.comboBoxCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCargo.FormattingEnabled = true;
             this.comboBoxCargo.Location = new System.Drawing.Point(283, 153);
             this.comboBoxCargo.Margin = new System.Windows.Forms.Padding(4);
@@ -416,6 +418,7 @@
             // 
             // comboBoxNivelPermissao
             // 
+            this.comboBoxNivelPermissao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNivelPermissao.FormattingEnabled = true;
             this.comboBoxNivelPermissao.Location = new System.Drawing.Point(492, 388);
             this.comboBoxNivelPermissao.Margin = new System.Windows.Forms.Padding(4);
