@@ -29,7 +29,7 @@ namespace DDI
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            menu menuCadastro = new menu();
+            CadastroFuncionario menuCadastro = new CadastroFuncionario();
             menuCadastro.Show();
             this.Close();
         }
@@ -43,7 +43,7 @@ namespace DDI
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AlterarExcluir alterarExcluir = new AlterarExcluir();
+            Consulta alterarExcluir = new Consulta();
             alterarExcluir.Show();
             this.Close();
         }
@@ -68,7 +68,7 @@ namespace DDI
 
             if (result)
             {
-                Form1 form1 = new Form1();
+                Login form1 = new Login();
                 form1.Show();
                 this.Close();
             }
@@ -76,7 +76,7 @@ namespace DDI
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Menu2 menu2 = new Menu2();
+            Menu menu2 = new Menu();
             menu2.Show();
             this.Close();
         }

@@ -19,7 +19,7 @@ namespace DDI
         private readonly string apiUrlTipoCargo = "http://localhost:5294/api/tipoCargo";
         private readonly string apiUrlTipoUsuario = "http://localhost:5294/api/tipoUsuario";
 
-        private CadastroFuncionario Funcionario;
+        private global::CadastroFuncionario Funcionario;
 
         public CadastroEmpresa()
         {
@@ -28,14 +28,14 @@ namespace DDI
             httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {Properties.Settings.Default.Token}");
         }
 
-        public void ObterDadosCadastroFuncionario(CadastroFuncionario funcionario)
+        public void ObterDadosCadastroFuncionario(global::CadastroFuncionario funcionario)
         {
             Funcionario = funcionario;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            menu menu = new menu();
+            CadastroFuncionario menu = new CadastroFuncionario();
             menu.definirDadosSalvosAnteriormente(Funcionario);
             menu.Show();
             this.Close();
@@ -159,7 +159,7 @@ namespace DDI
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            menu menuCadastro = new menu();
+            CadastroFuncionario menuCadastro = new CadastroFuncionario();
             menuCadastro.Show();
             this.Close();
         }
@@ -178,7 +178,7 @@ namespace DDI
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AlterarExcluir alterarExcluir = new AlterarExcluir();
+            Consulta alterarExcluir = new Consulta();
             alterarExcluir.Show();
             this.Close();
         }
@@ -203,7 +203,7 @@ namespace DDI
 
             if (result)
             {
-                Form1 form1 = new Form1();
+                Login form1 = new Login();
                 form1.Show();
                 this.Close();
             }
@@ -211,7 +211,7 @@ namespace DDI
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Menu2 menu2 = new Menu2();
+            Menu menu2 = new Menu();
             menu2.Show();
             this.Close();
         }

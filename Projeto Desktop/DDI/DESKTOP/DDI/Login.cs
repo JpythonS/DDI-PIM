@@ -13,11 +13,11 @@ using System.Windows.Forms;
 
 namespace DDI
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
         private readonly HttpClient httpClient;
 
-        public Form1()
+        public Login()
         {
             InitializeComponent();
             httpClient = new HttpClient();
@@ -51,7 +51,7 @@ namespace DDI
                     Properties.Settings.Default.Save();
 
 
-                    Menu2 menu2 = new Menu2();
+                    Menu menu2 = new Menu();
                     menu2.Show();
                     this.Hide();    
                 } else {
