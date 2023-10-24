@@ -32,7 +32,6 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.linkLabelEmpresasCargos = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabelGetFuncionario = new System.Windows.Forms.LinkLabel();
@@ -51,7 +50,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(219, 248);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(794, 317);
+            this.listView1.Size = new System.Drawing.Size(769, 317);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -59,7 +58,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.linkLabelEmpresasCargos);
-            this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.linkLabel4);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.linkLabelGetFuncionario);
@@ -73,6 +71,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(177, 609);
             this.panel1.TabIndex = 109;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // linkLabelEmpresasCargos
             // 
@@ -89,21 +88,6 @@
             this.linkLabelEmpresasCargos.Text = "Empresas e Cargos";
             this.linkLabelEmpresasCargos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(135)))), ((int)(((byte)(26)))));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(10, 364);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(138, 17);
-            this.linkLabel1.TabIndex = 106;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Relatório de salários";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // linkLabel4
             // 
             this.linkLabel4.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(135)))), ((int)(((byte)(26)))));
@@ -113,10 +97,10 @@
             this.linkLabel4.LinkColor = System.Drawing.Color.Black;
             this.linkLabel4.Location = new System.Drawing.Point(10, 338);
             this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(164, 17);
+            this.linkLabel4.Size = new System.Drawing.Size(136, 17);
             this.linkLabel4.TabIndex = 104;
             this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "Relatório de funcionário";
+            this.linkLabel4.Text = "Relatório de gestão";
             this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // label6
@@ -238,7 +222,6 @@
         #endregion
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.LinkLabel linkLabelGetFuncionario;
