@@ -336,7 +336,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(810, 575);
+            this.btnCancelar.Location = new System.Drawing.Point(783, 561);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 32);
             this.btnCancelar.TabIndex = 108;
@@ -351,7 +351,7 @@
             this.btnAvancar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAvancar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAvancar.ForeColor = System.Drawing.Color.White;
-            this.btnAvancar.Location = new System.Drawing.Point(926, 575);
+            this.btnAvancar.Location = new System.Drawing.Point(899, 561);
             this.btnAvancar.Name = "btnAvancar";
             this.btnAvancar.Size = new System.Drawing.Size(100, 32);
             this.btnAvancar.TabIndex = 107;
@@ -529,6 +529,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // Consulta
             // 
@@ -570,6 +571,7 @@
             this.Controls.Add(this.textBoxCelEmergencial);
             this.Controls.Add(this.textBoxNumero);
             this.Controls.Add(this.textBoxCel);
+            this.Location = new System.Drawing.Point(899, 561);
             this.Name = "Consulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
