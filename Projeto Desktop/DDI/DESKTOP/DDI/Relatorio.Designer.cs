@@ -50,18 +50,21 @@
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(208, 225);
+            this.listView1.Location = new System.Drawing.Point(292, 305);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(815, 362);
+            this.listView1.Size = new System.Drawing.Size(1024, 389);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // btnEntrar
             // 
             this.btnEntrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.Location = new System.Drawing.Point(208, 80);
+            this.btnEntrar.Location = new System.Drawing.Point(277, 98);
+            this.btnEntrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(217, 34);
+            this.btnEntrar.Size = new System.Drawing.Size(289, 42);
             this.btnEntrar.TabIndex = 14;
             this.btnEntrar.Text = "Relatório de funcionários";
             this.btnEntrar.UseVisualStyleBackColor = true;
@@ -69,9 +72,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(208, 141);
+            this.button1.Location = new System.Drawing.Point(277, 174);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 34);
+            this.button1.Size = new System.Drawing.Size(289, 42);
             this.button1.TabIndex = 15;
             this.button1.Text = "Relatório de salários";
             this.button1.UseVisualStyleBackColor = true;
@@ -80,9 +84,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(204, 22);
+            this.label1.Location = new System.Drawing.Point(272, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.Size = new System.Drawing.Size(125, 28);
             this.label1.TabIndex = 108;
             this.label1.Text = "Relatórios";
             // 
@@ -100,8 +105,9 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(177, 609);
+            this.panel1.Size = new System.Drawing.Size(236, 750);
             this.panel1.TabIndex = 111;
             // 
             // linkLabelEmpresasCargos
@@ -111,9 +117,10 @@
             this.linkLabelEmpresasCargos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelEmpresasCargos.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabelEmpresasCargos.LinkColor = System.Drawing.Color.Black;
-            this.linkLabelEmpresasCargos.Location = new System.Drawing.Point(10, 226);
+            this.linkLabelEmpresasCargos.Location = new System.Drawing.Point(13, 278);
+            this.linkLabelEmpresasCargos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabelEmpresasCargos.Name = "linkLabelEmpresasCargos";
-            this.linkLabelEmpresasCargos.Size = new System.Drawing.Size(131, 17);
+            this.linkLabelEmpresasCargos.Size = new System.Drawing.Size(169, 21);
             this.linkLabelEmpresasCargos.TabIndex = 107;
             this.linkLabelEmpresasCargos.TabStop = true;
             this.linkLabelEmpresasCargos.Text = "Empresas e Cargos";
@@ -125,9 +132,10 @@
             this.linkLabel4.AutoSize = true;
             this.linkLabel4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel4.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel4.Location = new System.Drawing.Point(10, 338);
+            this.linkLabel4.Location = new System.Drawing.Point(13, 416);
+            this.linkLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(136, 17);
+            this.linkLabel4.Size = new System.Drawing.Size(175, 21);
             this.linkLabel4.TabIndex = 104;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "Relatório de gestão";
@@ -137,9 +145,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 306);
+            this.label6.Location = new System.Drawing.Point(4, 377);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 23);
+            this.label6.Size = new System.Drawing.Size(114, 28);
             this.label6.TabIndex = 103;
             this.label6.Text = "Relatório";
             // 
@@ -150,9 +159,10 @@
             this.linkLabelGetFuncionario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelGetFuncionario.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabelGetFuncionario.LinkColor = System.Drawing.Color.Black;
-            this.linkLabelGetFuncionario.Location = new System.Drawing.Point(10, 282);
+            this.linkLabelGetFuncionario.Location = new System.Drawing.Point(13, 347);
+            this.linkLabelGetFuncionario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabelGetFuncionario.Name = "linkLabelGetFuncionario";
-            this.linkLabelGetFuncionario.Size = new System.Drawing.Size(83, 17);
+            this.linkLabelGetFuncionario.Size = new System.Drawing.Size(104, 21);
             this.linkLabelGetFuncionario.TabIndex = 102;
             this.linkLabelGetFuncionario.TabStop = true;
             this.linkLabelGetFuncionario.Text = "Funcionário";
@@ -162,9 +172,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 252);
+            this.label5.Location = new System.Drawing.Point(4, 310);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 23);
+            this.label5.Size = new System.Drawing.Size(114, 28);
             this.label5.TabIndex = 101;
             this.label5.Text = "Consulta";
             // 
@@ -172,9 +183,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 169);
+            this.label4.Location = new System.Drawing.Point(4, 208);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 23);
+            this.label4.Size = new System.Drawing.Size(120, 28);
             this.label4.TabIndex = 100;
             this.label4.Text = "Cadastro";
             // 
@@ -185,9 +197,10 @@
             this.linkLabelFuncionarios.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelFuncionarios.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabelFuncionarios.LinkColor = System.Drawing.Color.Black;
-            this.linkLabelFuncionarios.Location = new System.Drawing.Point(10, 201);
+            this.linkLabelFuncionarios.Location = new System.Drawing.Point(13, 247);
+            this.linkLabelFuncionarios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabelFuncionarios.Name = "linkLabelFuncionarios";
-            this.linkLabelFuncionarios.Size = new System.Drawing.Size(88, 17);
+            this.linkLabelFuncionarios.Size = new System.Drawing.Size(111, 21);
             this.linkLabelFuncionarios.TabIndex = 99;
             this.linkLabelFuncionarios.TabStop = true;
             this.linkLabelFuncionarios.Text = "Funcionários";
@@ -200,9 +213,10 @@
             this.lblSair.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSair.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lblSair.LinkColor = System.Drawing.Color.Black;
-            this.lblSair.Location = new System.Drawing.Point(4, 401);
+            this.lblSair.Location = new System.Drawing.Point(5, 494);
+            this.lblSair.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSair.Name = "lblSair";
-            this.lblSair.Size = new System.Drawing.Size(37, 19);
+            this.lblSair.Size = new System.Drawing.Size(44, 23);
             this.lblSair.TabIndex = 97;
             this.lblSair.TabStop = true;
             this.lblSair.Text = "Sair";
@@ -212,9 +226,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-19, -14);
+            this.pictureBox1.Location = new System.Drawing.Point(-25, -17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(212, 171);
+            this.pictureBox1.Size = new System.Drawing.Size(283, 210);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -222,17 +237,19 @@
             // 
             // Relatorio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(1371, 750);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.listView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Relatorio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatórios";
+            this.Load += new System.EventHandler(this.Relatorio_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

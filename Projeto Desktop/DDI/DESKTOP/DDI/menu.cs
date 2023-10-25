@@ -15,8 +15,10 @@ namespace DDI
     public partial class Menu : Form
     {
         private readonly string apiUrl = "http://localhost:5294/api/funcionario/";
+        private readonly ApiService apiService;
         public Menu()
         {
+            apiService = new ApiService();
             InitializeComponent();
         }
 
@@ -28,28 +30,9 @@ namespace DDI
             this.Close();
         }
 
-        private async Task<List<Funcionario>> GetFuncionariosAsync(string token)
-        {
-            using (HttpClient client = new HttpClient())
-            {
-
-                client.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
-                HttpResponseMessage response = await client.GetAsync(apiUrl);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    string responseContent = await response.Content.ReadAsStringAsync();
-                    return JsonConvert.DeserializeObject<List<Funcionario>>(responseContent);
-                }
-                else
-                {
-                    throw new Exception($"Erro na requisição à API: {response.StatusCode}");
-                }
-            }
-        }
-
         private async void Menu2_Load(object sender, EventArgs e)
         {
+ 
             ColumnHeader headerMatricula = new ColumnHeader()
             {
                 Text = "Matrícula",
@@ -87,7 +70,7 @@ namespace DDI
 
             try
             {
-                List<Funcionario> funcionarios = await GetFuncionariosAsync(Properties.Settings.Default.Token);
+                List<Funcionario> funcionarios = await apiService.GetFuncionariosAsync(Properties.Settings.Default.Token, apiUrl);
 
                 // Preencher a ListView com os resultados
                 foreach (Funcionario funcionario in funcionarios)
@@ -159,6 +142,11 @@ namespace DDI
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

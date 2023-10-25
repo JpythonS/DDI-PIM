@@ -11,6 +11,7 @@ namespace DDI
     public class ApiService
     {
         private readonly HttpClient _httpClient;
+        public static readonly string API_URL_FUNCIONARIO = "http://localhost:5294/api/funcionario/";
 
         public ApiService() 
         { 
@@ -31,6 +32,26 @@ namespace DDI
             else
             {
                 throw new Exception($"Erro na requisição à API: {response.StatusCode}");
+            }
+        }
+
+        public async Task<List<Funcionario>> GetFuncionariosAsync(string token, string apiUrl)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+
+                client.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
+                HttpResponseMessage response = await client.GetAsync(apiUrl);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseContent = await response.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<List<Funcionario>>(responseContent);
+                }
+                else
+                {
+                    throw new Exception($"Erro na requisição à API: {response.StatusCode}");
+                }
             }
         }
 
