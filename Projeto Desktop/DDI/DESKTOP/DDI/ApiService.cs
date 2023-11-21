@@ -69,5 +69,21 @@ namespace DDI
                 throw new Exception($"Erro na requisição à API: {response.StatusCode}");
             }
         }
+        public async Task<List<RelatorioEmpresa>> GetRelatorioEmpresaAsync(string apiUrl)
+        {
+
+            
+                HttpResponseMessage response = await _httpClient.GetAsync(apiUrl);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseContent = await response.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<List<RelatorioEmpresa>>(responseContent);
+                }
+                else
+                {
+                    throw new Exception($"Erro na requisição à API: {response.StatusCode}");
+                }
+        }
     }
 }

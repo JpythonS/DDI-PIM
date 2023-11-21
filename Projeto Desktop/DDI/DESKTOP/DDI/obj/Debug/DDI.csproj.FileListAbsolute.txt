@@ -168,3 +168,10 @@ C:\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\obj\Debug\DDI.Menu.resources
 C:\Users\jpgon\pim\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\obj\Debug\DDI.Consulta.resources
 C:\Users\jpgon\pim\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\obj\Debug\DDI.Login.resources
 C:\Users\jpgon\pim\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\obj\Debug\DDI.CadastroFuncionario.resources
+C:\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\EPPlus.dll
+C:\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\EPPlus.Interfaces.dll
+C:\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\EPPlus.System.Drawing.dll
+C:\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\System.ComponentModel.Annotations.dll
+C:\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\EPPlus.xml
+C:\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml

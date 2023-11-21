@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OfficeOpenXml;
+using System.IO;
+
 
 namespace DDI
 {
@@ -177,5 +180,68 @@ namespace DDI
         {
 
         }
+
+        private async void btnEntrar_Click(object sender, EventArgs e)
+        {
+            string apiUrl = "http://localhost:5294/api/empresa/relatorio-funcionarios";
+            List<RelatorioEmpresa>dadosrelatorioempresa = await apiService.GetRelatorioEmpresaAsync(apiUrl);
+            GerarRelatorioExcel(dadosrelatorioempresa);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GerarRelatorioExcel(List<RelatorioEmpresa> dados)
+        {
+            // Crie um novo pacote Excel.
+            using (var package = new ExcelPackage())
+            {
+                // Crie uma planilha Excel.
+                var worksheet = package.Workbook.Worksheets.Add("Empresas");
+
+                // Adicione cabeçalhos à planilha.
+                worksheet.Cells["A1"].Value = "Empresa";
+                worksheet.Cells["B1"].Value = "Media Salarial";
+                worksheet.Cells["C1"].Value = "Soma Salarial";
+                worksheet.Cells["D1"].Value = "Quantidade de funcionarios";
+                // Adicione outras colunas conforme necessário.
+
+                // Preencha os dados da API na planilha.
+                for (int i = 0; i < dados.Count; i++)
+                {
+                    var empresa = dados[i];
+                    int linha = i + 2; // Comece na linha 2 para evitar sobrescrever os cabeçalhos.
+
+                    worksheet.Cells["A" + linha].Value = empresa.NomeEmpresa;
+                    worksheet.Cells["B" + linha].Value = empresa.MediaSalarial;
+                    worksheet.Cells["C" + linha].Value = empresa.SomaSalarial;
+                    worksheet.Cells["D" + linha].Value = empresa.QuantidadeFuncionarios;
+                    // Preencha outras colunas conforme necessário.
+                }
+
+                // Salve a planilha em um arquivo Excel.
+                var saveFileDialog = new SaveFileDialog
+                {
+                    Filter = "Arquivo Excel (*.xlsx)|*.xlsx",
+                    FileName = "RelatorioEmpresas.xlsx"
+                };
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    var file = new FileInfo(saveFileDialog.FileName);
+                    package.SaveAs(file);
+                }
+            }
+        }
     }
+}
+
+public class RelatorioEmpresa
+{
+    public string NomeEmpresa { get; set; }
+    public double MediaSalarial { get; set; }
+    public double SomaSalarial { get; set; }
+    public int QuantidadeFuncionarios { get; set; }
 }
