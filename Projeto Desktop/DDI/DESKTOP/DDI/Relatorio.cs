@@ -157,7 +157,7 @@ namespace DDI
 
             try
             {
-                List<Funcionario> funcionarios = await apiService.GetFuncionariosAsync(Properties.Settings.Default.Token, ApiService.API_URL_FUNCIONARIO);
+                List<Funcionario> funcionarios = await apiService.GetFuncionariosAsync(ApiService.API_URL_FUNCIONARIO);
 
                 // Preencher a ListView com os resultados
                 foreach (Funcionario funcionario in funcionarios)
@@ -188,14 +188,17 @@ namespace DDI
             GerarRelatorioExcel(dadosrelatorioempresa);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
-
+            string apiUrl = "http://localhost:5294/api/funcionario";
+            List<Funcionario> dadosrelatoriofunionario = await apiService.GetFuncionariosAsync(apiUrl);
+            GerarRelatorioFuncionarioExcel(dadosrelatoriofunionario);
         }
 
         private void GerarRelatorioExcel(List<RelatorioEmpresa> dados)
         {
             // Crie um novo pacote Excel.
+            OfficeOpenXml.ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             using (var package = new ExcelPackage())
             {
                 // Crie uma planilha Excel.
@@ -226,6 +229,67 @@ namespace DDI
                 {
                     Filter = "Arquivo Excel (*.xlsx)|*.xlsx",
                     FileName = "RelatorioEmpresas.xlsx"
+                };
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    var file = new FileInfo(saveFileDialog.FileName);
+                    package.SaveAs(file);
+                }
+            }
+        }
+
+        private void GerarRelatorioFuncionarioExcel(List<Funcionario> dados)
+        {
+            // Crie um novo pacote Excel.
+            OfficeOpenXml.ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+            using (var package = new ExcelPackage())
+            {
+                // Crie uma planilha Excel.
+                var worksheet = package.Workbook.Worksheets.Add("Empresas");
+
+                // Adicione cabeçalhos à planilha.
+                worksheet.Cells["A1"].Value = "Id";
+                worksheet.Cells["B1"].Value = "Nome";
+                worksheet.Cells["C1"].Value = "CPF";
+                worksheet.Cells["D1"].Value = "RG";
+                worksheet.Cells["E1"].Value = "Data de Nascimento";
+                worksheet.Cells["F1"].Value = "Celular";
+                worksheet.Cells["G1"].Value = "Endereco";
+                worksheet.Cells["H1"].Value = "Cidade";
+                worksheet.Cells["I1"].Value = "Estado";
+                worksheet.Cells["J1"].Value = "Empresa";
+                worksheet.Cells["K1"].Value = "Salario";
+                worksheet.Cells["L1"].Value = "Cargo";
+                // Adicione outras colunas conforme necessário.
+
+                // Preencha os dados da API na planilha.
+                for (int i = 0; i < dados.Count; i++)
+                {
+                    Funcionario funcionario = dados[i];
+                    int linha = i + 2; // Comece na linha 2 para evitar sobrescrever os cabeçalhos.
+
+                    worksheet.Cells["A" + linha].Value = funcionario.Id;
+                    worksheet.Cells["B" + linha].Value = funcionario.Nome;
+                    worksheet.Cells["C" + linha].Value = funcionario.Cpf;
+                    worksheet.Cells["D" + linha].Value = funcionario.Rg;
+                    worksheet.Cells["E" + linha].Value = funcionario.DataNascimento;
+                    worksheet.Cells["F" + linha].Value = funcionario.Celular;
+                    worksheet.Cells["G" + linha].Value = funcionario.Endereco;
+                    worksheet.Cells["H" + linha].Value = funcionario.Cidade;
+                    worksheet.Cells["I" + linha].Value = funcionario.Estado;
+                    worksheet.Cells["J" + linha].Value = funcionario.Empresa;
+                    worksheet.Cells["K" + linha].Value = funcionario.SalarioBase;
+                    worksheet.Cells["L" + linha].Value = funcionario.Cargo;
+                    
+                    // Preencha outras colunas conforme necessário.
+                }
+
+                // Salve a planilha em um arquivo Excel.
+                var saveFileDialog = new SaveFileDialog
+                {
+                    Filter = "Arquivo Excel (*.xlsx)|*.xlsx",
+                    FileName = "RelatorioFuncionarios.xlsx"
                 };
 
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)

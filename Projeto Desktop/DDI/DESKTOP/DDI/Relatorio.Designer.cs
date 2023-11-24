@@ -60,7 +60,7 @@
             // btnRelatorio1
             // 
             this.btnRelatorio1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRelatorio1.Location = new System.Drawing.Point(208, 80);
+            this.btnRelatorio1.Location = new System.Drawing.Point(219, 87);
             this.btnRelatorio1.Name = "btnRelatorio1";
             this.btnRelatorio1.Size = new System.Drawing.Size(217, 34);
             this.btnRelatorio1.TabIndex = 14;
@@ -71,11 +71,11 @@
             // btnRelatorio2
             // 
             this.btnRelatorio2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRelatorio2.Location = new System.Drawing.Point(208, 141);
+            this.btnRelatorio2.Location = new System.Drawing.Point(219, 142);
             this.btnRelatorio2.Name = "btnRelatorio2";
             this.btnRelatorio2.Size = new System.Drawing.Size(217, 34);
             this.btnRelatorio2.TabIndex = 15;
-            this.btnRelatorio2.Text = "Relatório de salários";
+            this.btnRelatorio2.Text = "Relatório de funcionários";
             this.btnRelatorio2.UseVisualStyleBackColor = true;
             this.btnRelatorio2.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -83,7 +83,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(204, 22);
+            this.label1.Location = new System.Drawing.Point(215, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 108;
@@ -233,6 +233,8 @@
             this.Controls.Add(this.btnRelatorio2);
             this.Controls.Add(this.btnRelatorio1);
             this.Controls.Add(this.listView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Relatorio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatórios";

@@ -285,7 +285,7 @@ public class CreateFuncionarioRequest
 {
     public string NomeCompleto { get; set; }
 
-    public string DataNascimento { get; set; }
+    public DateTime DataNascimento { get; set; }
 
     public string Endereco { get; set; }
 

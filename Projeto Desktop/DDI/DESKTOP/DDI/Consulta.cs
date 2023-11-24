@@ -242,11 +242,11 @@ namespace DDI
                     else
                     {
                         string requestBody = JsonConvert.SerializeObject(funcionario);
-                        MessageBox.Show($"Erro ao atualizar funcionário. Status: {response}");
+                        MessageBox.Show("Erro ao atualizar funcionário");
                     }
-                } catch (Exception ex) 
+                } catch  
                 {
-                    MessageBox.Show("Erro ao acessar a API: " + ex.Message);
+                    MessageBox.Show("Erro ao acessar a API: ");
                 }
 
             }
@@ -265,7 +265,6 @@ namespace DDI
             var content = new StringContent(requestBody, Encoding.UTF8, "application/json");
 
             string apiUrlCadastrarFuncionario = "http://localhost:5294/api/funcionario/atualizar/" + id;
-            MessageBox.Show(apiUrlCadastrarFuncionario);
             return await httpClient.PostAsync(apiUrlCadastrarFuncionario, content);
         }
 

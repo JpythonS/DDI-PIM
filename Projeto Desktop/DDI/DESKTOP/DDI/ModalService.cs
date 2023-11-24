@@ -16,6 +16,14 @@ namespace DDI
             return result == DialogResult.Yes;
         }
 
+        public static bool ExibirModalCancelar()
+        {
+            DialogResult result = MessageBox.Show("Você realmente deseja cancelar ?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            
+            return result == DialogResult.Yes;
+
+        }
+
         public static bool ExibirModalExclusao()
         {
             DialogResult result = MessageBox.Show(

@@ -32,7 +32,7 @@ namespace DDI
 
         private async void Menu2_Load(object sender, EventArgs e)
         {
- 
+
             ColumnHeader headerMatricula = new ColumnHeader()
             {
                 Text = "Matrícula",
@@ -70,11 +70,11 @@ namespace DDI
 
             try
             {
-                List<Funcionario> funcionarios = await apiService.GetFuncionariosAsync(Properties.Settings.Default.Token, apiUrl);
+                List<Funcionario> funcionarios = await apiService.GetFuncionariosAsync(apiUrl);
 
                 // Preencher a ListView com os resultados
                 foreach (Funcionario funcionario in funcionarios)
-                {                                
+                {
                     ListViewItem item = new ListViewItem(funcionario.Id.ToString());
                     item.SubItems.Add(funcionario.Nome);
                     item.SubItems.Add(funcionario.Cargo);
@@ -150,8 +150,13 @@ namespace DDI
         {
 
         }
+
+        private async void btnEnviar_Click(object sender, EventArgs e)
+        {
+           await apiService.AtualizarFolhaDePagamento();
+        }
     }
-    
+
 }
 
 public class Funcionario
@@ -175,3 +180,4 @@ public class Funcionario
     public string Empresa { get; set; }
     public string NivelPermissao { get; set; }
 }
+    

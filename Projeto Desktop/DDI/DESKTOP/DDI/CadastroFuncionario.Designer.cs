@@ -30,12 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroFuncionario));
             this.txtCpf = new System.Windows.Forms.TextBox();
-            this.txtData = new System.Windows.Forms.TextBox();
             this.txtRg = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtCel = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
-            this.txtCep = new System.Windows.Forms.TextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
@@ -46,7 +44,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -69,6 +66,7 @@
             this.linkLabelFuncionarios = new System.Windows.Forms.LinkLabel();
             this.lblSair = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtData = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -79,13 +77,6 @@
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(143, 20);
             this.txtCpf.TabIndex = 3;
-            // 
-            // txtData
-            // 
-            this.txtData.Location = new System.Drawing.Point(199, 268);
-            this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(143, 20);
-            this.txtData.TabIndex = 6;
             // 
             // txtRg
             // 
@@ -103,49 +94,42 @@
             // 
             // txtCel
             // 
-            this.txtCel.Location = new System.Drawing.Point(362, 268);
+            this.txtCel.Location = new System.Drawing.Point(472, 268);
             this.txtCel.Name = "txtCel";
-            this.txtCel.Size = new System.Drawing.Size(143, 20);
+            this.txtCel.Size = new System.Drawing.Size(129, 20);
             this.txtCel.TabIndex = 7;
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(625, 387);
+            this.txtNumero.Location = new System.Drawing.Point(625, 324);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(143, 20);
             this.txtNumero.TabIndex = 10;
             // 
-            // txtCep
-            // 
-            this.txtCep.Location = new System.Drawing.Point(199, 328);
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(143, 20);
-            this.txtCep.TabIndex = 8;
-            // 
             // txtEndereco
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(199, 387);
+            this.txtEndereco.Location = new System.Drawing.Point(199, 324);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(402, 20);
             this.txtEndereco.TabIndex = 9;
             // 
             // txtBairro
             // 
-            this.txtBairro.Location = new System.Drawing.Point(199, 452);
+            this.txtBairro.Location = new System.Drawing.Point(199, 389);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(116, 20);
             this.txtBairro.TabIndex = 12;
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(472, 452);
+            this.txtEstado.Location = new System.Drawing.Point(472, 389);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(129, 20);
             this.txtEstado.TabIndex = 14;
             // 
             // txtCidade
             // 
-            this.txtCidade.Location = new System.Drawing.Point(335, 452);
+            this.txtCidade.Location = new System.Drawing.Point(335, 389);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(118, 20);
             this.txtCidade.TabIndex = 13;
@@ -204,27 +188,17 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(359, 248);
+            this.label7.Location = new System.Drawing.Point(469, 248);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 17);
             this.label7.TabIndex = 25;
             this.label7.Text = "Celular";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(196, 304);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 17);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "CEP";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(196, 367);
+            this.label9.Location = new System.Drawing.Point(196, 304);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(69, 17);
             this.label9.TabIndex = 27;
@@ -234,7 +208,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(622, 367);
+            this.label10.Location = new System.Drawing.Point(622, 304);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 17);
             this.label10.TabIndex = 28;
@@ -244,7 +218,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(196, 432);
+            this.label12.Location = new System.Drawing.Point(196, 369);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(44, 17);
             this.label12.TabIndex = 30;
@@ -254,7 +228,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(332, 432);
+            this.label13.Location = new System.Drawing.Point(332, 369);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(57, 17);
             this.label13.TabIndex = 31;
@@ -264,7 +238,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(469, 432);
+            this.label14.Location = new System.Drawing.Point(469, 369);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(52, 17);
             this.label14.TabIndex = 32;
@@ -331,7 +305,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(523, 248);
+            this.label18.Location = new System.Drawing.Point(622, 248);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(145, 17);
             this.label18.TabIndex = 97;
@@ -339,7 +313,7 @@
             // 
             // textBoxCelEmergencia
             // 
-            this.textBoxCelEmergencia.Location = new System.Drawing.Point(526, 268);
+            this.textBoxCelEmergencia.Location = new System.Drawing.Point(625, 268);
             this.textBoxCelEmergencia.Name = "textBoxCelEmergencia";
             this.textBoxCelEmergencia.Size = new System.Drawing.Size(143, 20);
             this.textBoxCelEmergencia.TabIndex = 96;
@@ -479,11 +453,20 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
+            // txtData
+            // 
+            this.txtData.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtData.Location = new System.Drawing.Point(199, 268);
+            this.txtData.Name = "txtData";
+            this.txtData.Size = new System.Drawing.Size(253, 21);
+            this.txtData.TabIndex = 111;
+            // 
             // CadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.Controls.Add(this.txtData);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.textBoxCelEmergencia);
@@ -497,7 +480,6 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -508,13 +490,13 @@
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtBairro);
             this.Controls.Add(this.txtEndereco);
-            this.Controls.Add(this.txtCep);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.txtCel);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtRg);
-            this.Controls.Add(this.txtData);
             this.Controls.Add(this.txtCpf);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "CadastroFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
@@ -529,12 +511,10 @@
 
         #endregion
         private System.Windows.Forms.TextBox txtCpf;
-        private System.Windows.Forms.TextBox txtData;
         private System.Windows.Forms.TextBox txtRg;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtCel;
         private System.Windows.Forms.TextBox txtNumero;
-        private System.Windows.Forms.TextBox txtCep;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.TextBox txtEstado;
@@ -545,7 +525,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
@@ -568,5 +547,6 @@
         private System.Windows.Forms.LinkLabel linkLabelFuncionarios;
         private System.Windows.Forms.LinkLabel lblSair;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DateTimePicker txtData;
     }
 }

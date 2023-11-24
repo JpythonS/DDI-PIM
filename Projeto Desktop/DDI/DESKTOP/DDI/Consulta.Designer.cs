@@ -533,6 +533,7 @@
             // 
             // Consulta
             // 
+            this.AcceptButton = this.btnPesquisar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 609);
@@ -571,7 +572,9 @@
             this.Controls.Add(this.textBoxCelEmergencial);
             this.Controls.Add(this.textBoxNumero);
             this.Controls.Add(this.textBoxCel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Location = new System.Drawing.Point(899, 561);
+            this.MaximizeBox = false;
             this.Name = "Consulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";

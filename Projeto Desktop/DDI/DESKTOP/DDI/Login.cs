@@ -21,6 +21,7 @@ namespace DDI
         {
             InitializeComponent();
             httpClient = new HttpClient();
+            this.Load += Login_Load;
         }
 
         private async void btnEntrar_Click(object sender, EventArgs e)
@@ -71,6 +72,10 @@ namespace DDI
                 request.Content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
                 return await httpClient.SendAsync(request);
             }
+        }
+        private void Login_Load(object sender, EventArgs e)
+        {
+            this.AcceptButton = btnEntrar;
         }
     }
 }

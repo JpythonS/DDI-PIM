@@ -23,7 +23,7 @@ namespace DDI
             txtCpf.Text = funcionario.Cpf;
             txtRg.Text = funcionario.Rg;
             txtPis.Text = funcionario.Pis;
-            txtData.Text = funcionario.DataNascimento;
+            txtData.Value = funcionario.DataNascimento;
             txtCel.Text = funcionario.Celular;
             textBoxCelEmergencia.Text = funcionario.CelularEmergencia;
             txtEndereco.Text = funcionario.Endereco;
@@ -45,11 +45,6 @@ namespace DDI
 
         }
 
-        private void btnCancelar_Click_1(object sender, EventArgs e)
-        {
-            MessageBox.Show("Você realmente deseja cancelar ?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-        }
-
         private void lblSair_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("Você realmente deseja sair ?", "Atenção!",MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation);
@@ -57,7 +52,23 @@ namespace DDI
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Você realmente deseja cancelar ?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            bool result = ModalService.ExibirModalCancelar();
+
+            if (result)
+            {
+                txtCpf.Text = "";
+                txtBairro.Text = "";
+                txtCel.Text = "";
+                txtCidade.Text = "";
+                txtEndereco.Text = "";
+                txtEstado.Text = "";
+                txtNome.Text = "";
+                txtNumero.Text = "";
+                txtPis.Text = "";
+                txtRg.Text = "";
+                textBoxCelEmergencia.Text = "";
+            }
+         
         }
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -120,7 +131,7 @@ namespace DDI
                 Cpf = txtCpf.Text,
                 Rg = txtRg.Text,
                 Pis = txtPis.Text,
-                DataNascimento = txtData.Text,
+                DataNascimento = txtData.Value,
                 Celular = txtCel.Text,
                 CelularEmergencia = textBoxCelEmergencia.Text,
                 Endereco = txtEndereco.Text,
@@ -188,6 +199,11 @@ namespace DDI
             menu.Show();
             this.Close();
         }
+
+        private void txtData_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
@@ -197,7 +213,7 @@ public class CadastroFuncionario
     public string Cpf { get; set; }
     public string Rg { get; set; }
     public string Pis { get; set; }
-    public string DataNascimento { get; set; }
+    public DateTime DataNascimento { get; set; }
     public string Celular { get; set; }
     public string CelularEmergencia { get; set; }
     public string Cep { get; set; }
