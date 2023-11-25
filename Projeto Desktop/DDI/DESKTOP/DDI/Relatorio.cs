@@ -299,6 +299,13 @@ namespace DDI
                 }
             }
         }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CadastroAdicionais menuAdicionais = new CadastroAdicionais();
+            menuAdicionais.Show();
+            this.Close();
+        }
     }
 }
 

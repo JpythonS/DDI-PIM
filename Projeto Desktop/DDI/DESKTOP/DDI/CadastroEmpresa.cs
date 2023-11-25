@@ -265,6 +265,11 @@ namespace DDI
             menu.Show();
             this.Close();
         }
+
+        private void comboBoxCargo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
     

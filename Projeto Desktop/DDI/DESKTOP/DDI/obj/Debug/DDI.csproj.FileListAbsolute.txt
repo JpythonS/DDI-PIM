@@ -175,3 +175,4 @@ C:\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\Microsoft.IO.RecyclableMemo
 C:\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\System.ComponentModel.Annotations.dll
 C:\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\EPPlus.xml
 C:\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\obj\Debug\DDI.CadastroAdicionais.resources

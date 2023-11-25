@@ -123,7 +123,17 @@ namespace DDI
                     MessageBox.Show($"Erro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        public async Task<HttpResponseMessage> PostTipoGenericoAsync(string apiUrl, string valor)
+        {
+
+            StringContent content = new StringContent($"{{\"valor\":\"{valor}\"}}", Encoding.UTF8, "application/json");
+            return await _httpClient.PostAsync(apiUrl, content);
+
         }
     }
+       
+
+}
+
     
 

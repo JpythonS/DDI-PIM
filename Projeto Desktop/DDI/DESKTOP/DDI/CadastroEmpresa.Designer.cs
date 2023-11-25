@@ -206,6 +206,7 @@
             this.comboBoxCargo.Name = "comboBoxCargo";
             this.comboBoxCargo.Size = new System.Drawing.Size(153, 21);
             this.comboBoxCargo.TabIndex = 92;
+            this.comboBoxCargo.SelectedIndexChanged += new System.EventHandler(this.comboBoxCargo_SelectedIndexChanged);
             // 
             // comboBoxNivelPermissao
             // 

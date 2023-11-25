@@ -14,12 +14,14 @@ namespace DDI
     public partial class CadastroCargos : Form
     {
         private readonly HttpClient httpClient;
+        private readonly ApiService apiService;
 
         public CadastroCargos()
         {
             InitializeComponent();
             httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {Properties.Settings.Default.Token}");
+            apiService = new ApiService();
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -86,8 +88,8 @@ namespace DDI
             try 
             {
                 const string apiUrlTipoCargo = "http://localhost:5294/api/tipoCargo";
-                StringContent content = new StringContent($"{{\"valor\":\"{txtCargo.Text}\"}}", Encoding.UTF8, "application/json");
-                HttpResponseMessage response = await httpClient.PostAsync(apiUrlTipoCargo, content);
+                HttpResponseMessage response = await apiService.PostTipoGenericoAsync(apiUrlTipoCargo,txtCargo.Text);
+                
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -178,6 +180,11 @@ namespace DDI
             Menu menu = new Menu();
             menu.Show();
             this.Close();
+        }
+
+        private void txtCargo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
