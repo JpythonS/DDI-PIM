@@ -130,9 +130,28 @@ namespace DDI
             return await _httpClient.PostAsync(apiUrl, content);
 
         }
-    }
-       
 
+
+        public async Task<HttpResponseMessage> PostVincularAdicionalAsync(int funcinoarioId, double valorAdicional, int tipoAdicionalCod)
+        {
+            string apiUrl = "http://localhost:5294/api/funcionario/adicionais";
+            var requestData = new { FuncionarioId =  funcinoarioId, ValorFixo = valorAdicional, TipoAdicionalCod = tipoAdicionalCod };
+            string requestBody = JsonConvert.SerializeObject(requestData);
+            StringContent content = new StringContent(requestBody, Encoding.UTF8, "application/json");
+            return await _httpClient.PostAsync(apiUrl, content);
+
+        }
+
+        public async Task<HttpResponseMessage> PostVincularDescontoAsync(int funcinoarioId, double valorDesconto, int tipoDescontoCod)
+        {
+            string apiUrl = "http://localhost:5294/api/funcionario/descontos";
+            var requestData = new { FuncionarioId = funcinoarioId, ValorFixo = valorDesconto, TipoDescontoCod = tipoDescontoCod };
+            string requestBody = JsonConvert.SerializeObject(requestData);
+            StringContent content = new StringContent(requestBody, Encoding.UTF8, "application/json");
+            return await _httpClient.PostAsync(apiUrl, content);
+
+        }
+    }
 }
 
     

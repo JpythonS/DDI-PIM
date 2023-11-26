@@ -176,3 +176,11 @@ C:\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\System.ComponentModel.Annot
 C:\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\EPPlus.xml
 C:\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
 C:\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\obj\Debug\DDI.CadastroAdicionais.resources
+C:\Users\jpgon\pim\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\EPPlus.dll
+C:\Users\jpgon\pim\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\jpgon\pim\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\jpgon\pim\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\jpgon\pim\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\jpgon\pim\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\EPPlus.xml
+C:\Users\jpgon\pim\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\jpgon\pim\DDI-PIM\Projeto Desktop\DDI\DESKTOP\DDI\obj\Debug\DDI.CadastroAdicionais.resources

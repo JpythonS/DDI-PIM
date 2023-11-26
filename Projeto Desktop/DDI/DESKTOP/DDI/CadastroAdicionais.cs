@@ -110,5 +110,67 @@ namespace DDI
                 MessageBox.Show($"Erro na requisição POST. Status: {ex}");
             }
         }
+
+        private async void btnVincularAdicional_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                HttpResponseMessage response = await apiService.PostVincularAdicionalAsync
+                (
+                    int.Parse(txtMatriculaAdicional.Text),
+                    double.Parse(txtVincularAdicional.Text),
+                    Convert.ToInt32(comboAdicional.SelectedValue)
+                );
+
+                if (response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Adicional vinculado com sucesso!");
+                    txtMatriculaAdicional.Text = "";
+                    txtVincularAdicional.Text = "";
+                    comboAdicional.SelectedIndex = -1;
+                }
+                else
+                {
+                    MessageBox.Show($"Erro no vinculo de cadastro {response.StatusCode}");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro na requisição POST. Status: {ex}");
+            }
+        }
+
+        private async void btnVincularDesconto_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                HttpResponseMessage response = await apiService.PostVincularDescontoAsync
+                (
+                    int.Parse(txtMatriculaDesconto.Text),
+                    double.Parse(txtValorDesconto.Text),
+                    Convert.ToInt32(comboDesconto.SelectedValue)
+                );
+
+                if (response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Desconto vinculado com sucesso!");
+                    txtMatriculaDesconto.Text = "";
+                    txtValorDesconto.Text = "";
+                    comboDesconto.SelectedIndex = -1;
+                }
+                else
+                {
+                    MessageBox.Show($"Erro no vinculo de cadastro {response.StatusCode}");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro na requisição POST. Status: {ex}");
+            }
+        }
     }
 }
