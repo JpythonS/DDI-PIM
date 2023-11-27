@@ -313,6 +313,58 @@ namespace DDI
             menu.Show();
             this.Close();
         }
+
+        private void lblSair_LinkClicked_2(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            bool result = ModalService.ExibirModalSairSistema();
+
+            if (result)
+            {
+                Login form1 = new Login();
+                form1.Show();
+                this.Close();
+            }
+        }
+
+        private void linkLabel4_LinkClicked_2(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Relatorio Relatorio = new Relatorio();
+            Relatorio.Show();
+            this.Close();
+        }
+
+        private void linkLabelGetFuncionario_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Você já está nesta tela!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CadastroAdicionais menuAdicionais = new CadastroAdicionais();
+            menuAdicionais.Show();
+            this.Close();
+        }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Close();
+        }
+
+        private void linkLabelFuncionarios_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CadastroFuncionario menuCadastro = new CadastroFuncionario();
+            menuCadastro.Show();
+            this.Close();
+        }
+
+        private void linkLabelEmpresasCargos_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CadastroCargos menuCadastro = new CadastroCargos();
+            menuCadastro.Show();
+            this.Close();
+        }
     }
     }
 

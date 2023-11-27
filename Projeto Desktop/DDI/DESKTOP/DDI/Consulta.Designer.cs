@@ -64,6 +64,7 @@
             this.comboBoxNivelPermissao = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabelEmpresasCargos = new System.Windows.Forms.LinkLabel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
@@ -399,6 +400,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.linkLabelEmpresasCargos);
             this.panel1.Controls.Add(this.linkLabel4);
             this.panel1.Controls.Add(this.label6);
@@ -414,12 +416,27 @@
             this.panel1.Size = new System.Drawing.Size(177, 609);
             this.panel1.TabIndex = 148;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(135)))), ((int)(((byte)(26)))));
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(10, 250);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(157, 17);
+            this.linkLabel1.TabIndex = 108;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Adicionais e Descontos";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
+            // 
             // linkLabelEmpresasCargos
             // 
             this.linkLabelEmpresasCargos.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(135)))), ((int)(((byte)(26)))));
             this.linkLabelEmpresasCargos.AutoSize = true;
             this.linkLabelEmpresasCargos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelEmpresasCargos.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabelEmpresasCargos.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabelEmpresasCargos.LinkColor = System.Drawing.Color.Black;
             this.linkLabelEmpresasCargos.Location = new System.Drawing.Point(10, 226);
             this.linkLabelEmpresasCargos.Name = "linkLabelEmpresasCargos";
@@ -427,28 +444,28 @@
             this.linkLabelEmpresasCargos.TabIndex = 107;
             this.linkLabelEmpresasCargos.TabStop = true;
             this.linkLabelEmpresasCargos.Text = "Empresas e Cargos";
-            this.linkLabelEmpresasCargos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelEmpresasCargos_LinkClicked);
+            this.linkLabelEmpresasCargos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelEmpresasCargos_LinkClicked_1);
             // 
             // linkLabel4
             // 
             this.linkLabel4.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(135)))), ((int)(((byte)(26)))));
             this.linkLabel4.AutoSize = true;
             this.linkLabel4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel4.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel4.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel4.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel4.Location = new System.Drawing.Point(10, 338);
+            this.linkLabel4.Location = new System.Drawing.Point(10, 363);
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Size = new System.Drawing.Size(136, 17);
             this.linkLabel4.TabIndex = 104;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "Relatório de gestão";
-            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked_1);
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked_2);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 306);
+            this.label6.Location = new System.Drawing.Point(3, 331);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 23);
             this.label6.TabIndex = 103;
@@ -459,21 +476,20 @@
             this.linkLabelGetFuncionario.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(135)))), ((int)(((byte)(26)))));
             this.linkLabelGetFuncionario.AutoSize = true;
             this.linkLabelGetFuncionario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelGetFuncionario.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
             this.linkLabelGetFuncionario.LinkColor = System.Drawing.Color.Black;
-            this.linkLabelGetFuncionario.Location = new System.Drawing.Point(10, 282);
+            this.linkLabelGetFuncionario.Location = new System.Drawing.Point(10, 307);
             this.linkLabelGetFuncionario.Name = "linkLabelGetFuncionario";
-            this.linkLabelGetFuncionario.Size = new System.Drawing.Size(88, 17);
+            this.linkLabelGetFuncionario.Size = new System.Drawing.Size(83, 17);
             this.linkLabelGetFuncionario.TabIndex = 102;
             this.linkLabelGetFuncionario.TabStop = true;
-            this.linkLabelGetFuncionario.Text = "Funcionários";
-            this.linkLabelGetFuncionario.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelGetFuncionario_LinkClicked);
+            this.linkLabelGetFuncionario.Text = "Funcionário";
+            this.linkLabelGetFuncionario.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelGetFuncionario_LinkClicked_1);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 252);
+            this.label5.Location = new System.Drawing.Point(3, 277);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 23);
             this.label5.TabIndex = 101;
@@ -494,7 +510,7 @@
             this.linkLabelFuncionarios.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(135)))), ((int)(((byte)(26)))));
             this.linkLabelFuncionarios.AutoSize = true;
             this.linkLabelFuncionarios.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelFuncionarios.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabelFuncionarios.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabelFuncionarios.LinkColor = System.Drawing.Color.Black;
             this.linkLabelFuncionarios.Location = new System.Drawing.Point(10, 201);
             this.linkLabelFuncionarios.Name = "linkLabelFuncionarios";
@@ -502,14 +518,14 @@
             this.linkLabelFuncionarios.TabIndex = 99;
             this.linkLabelFuncionarios.TabStop = true;
             this.linkLabelFuncionarios.Text = "Funcionários";
-            this.linkLabelFuncionarios.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelFuncionarios_LinkClicked);
+            this.linkLabelFuncionarios.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelFuncionarios_LinkClicked_1);
             // 
             // lblSair
             // 
             this.lblSair.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(135)))), ((int)(((byte)(26)))));
             this.lblSair.AutoSize = true;
             this.lblSair.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSair.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lblSair.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lblSair.LinkColor = System.Drawing.Color.Black;
             this.lblSair.Location = new System.Drawing.Point(4, 401);
             this.lblSair.Name = "lblSair";
@@ -517,7 +533,7 @@
             this.lblSair.TabIndex = 97;
             this.lblSair.TabStop = true;
             this.lblSair.Text = "Sair";
-            this.lblSair.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblSair_LinkClicked_1);
+            this.lblSair.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblSair_LinkClicked_2);
             // 
             // pictureBox1
             // 
@@ -529,7 +545,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_2);
             // 
             // Consulta
             // 
@@ -623,6 +639,7 @@
         private System.Windows.Forms.ComboBox comboBoxNivelPermissao;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabelEmpresasCargos;
         private System.Windows.Forms.LinkLabel linkLabel4;
         private System.Windows.Forms.Label label6;
